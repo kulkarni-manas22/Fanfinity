@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fanfinity | Profile</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+
+    <!-- ================= HEADER ================= -->
+<header class="navbar">
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="images/Logos/logo_image.png" alt="Fanfinity Logo" id="img1">
+    </div>
+
+    <!--login button
+    <nav>
+        <button class="btn" id="loginBtn">Login</button>
+    </nav>-->
+
+    
+    
+    <!--location dropdown-->
+    <div class="nav-center">
+        <div class="icon-circle" id="home1">
+           <a href="home.html" >
+           <img src="images/icons/home-agreement.png" alt="Menu" >
+           </a>
+       </div>
+        <!--<div class="location">
+            <select>
+                <option>Select Location📍</option>
+                <option>New York</option>
+                <option>Los Angeles</option>
+                <option>Chicago</option>
+                <option>Houston</option>
+                <option>India</option>
+            </select>
+        </div>-->
+
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="search" placeholder="Search">
+            <img src="images/icons/search.png" alt="search">
+            <!--<span class="search-icon">🔍</span>-->
+        </div>
+    
+        <!-- Right Icons -->
+        <div class="nav-icons">
+            <a href="wishlist.html">
+                <div class="icon-circle" id="heart1">
+                    <img src="images/icons/heart.png" alt="Cart"><br>
+                </div>
+            </a>
+            <div class="icon-circle" id="cart1">
+                <a href="cart.html">
+                <img src="images/icons/shopping-bag.png" alt="Cart"><br>
+                </a>
+            </div>
+            <div class="icon-circle" onclick="openMenu()">
+                <img src="images/icons/app-removebg-preview.png" alt="Menu" >
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ================= Side Menu ================= -->
+<!-- Side Menu -->
+<div class="side-menu" id="sideMenu">
+    <div class="close">
+        <span class="close-btn" onclick="closeMenu()">×</span>
+    </div>
+    <div class="menu-header">
+        <!--<h2>Menu</h2>-->
+        <img src="images/Logos/logo_image.png" alt="fanfinity Logo" class="logo">
+    </div>
+    <div class="links-grp">
+        <a href="profile.html">
+            <div class="list-links">
+                <img src="images/icons/user-16.png" alt="User" ><p>Profile </p><span>›</span>
+            </div>
+        </a>
+        <a href="order.html">
+            <div class="list-links">
+                <img src="images/icons/purchase-order-16.png" alt="Orders" ><p>Orders</p> <span>›</span>
+            </div>
+        </a>
+        <a href="contact.html">
+            <div class="list-links">
+                <img src="images/icons/call.png" alt="ContactUs" ><p>Contact Us</p> <span>›</span>
+            </div>
+        </a>
+        <button class="logout-btn" id="logOutBtn">Log-out</button>
+    </div>
+</div>
+
+
+
+<!-- ================= Profile containers ================= -->
+<div class="profile-container">
+    <!-- Top Profile Card -->
+    <div class="profile-header">
+        <div class="profile-left">
+            <div class="avatar"><img src="images/icons/user-24.png" alt="profile"></div>
+            <div>
+                <h2>ManasKulkarni@22</h2>
+                <p>📍 Pune, Maharashtra</p>
+            </div>
+        </div>
+        <button class="edit-btn" id="editBtn"  onclick="openProfileModal()">Edit Profile</button>
+    </div>
+
+    <!-- Dashboard Grid -->
+    <div class="dashboard-grid">
+
+        <!-- Address -->
+        <div class="card">
+            <h3>Address Details</h3>
+            <div class="card-content"></div>
+            <button class="card-btn"  onclick="openProfileModal()" >Edit Address</button>
+        </div>
+
+        <!-- Orders -->
+        <div class="card">
+            <h3><img src="images/icons/purchase-order-16.png" alt="orders">My Orders</h3>
+            <div class="card-content">
+                <div class="product-item">
+
+                    <div class="product-image">
+                        <img src="images/products/itachi.jpg" alt="Itachi Figure">
+                    </div>
+
+                    <div class="product-details">
+                        <h3>
+                            Anime Itachi Uchiha Action Figure with Crows |
+                            Premium Collectible Statue |
+                            Naruto Shippuden Merchandise
+                        </h3>
+
+                        <div class="price">₹4,499.00</div>
+
+                        <div class="list-price">
+                            List Price: <span>₹6,299.00</span>
+                        </div>
+
+                        <div class="save">
+                            💸 You Save: ₹1,800 (29%)
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <a href="order.html">
+            <button class="card-btn">View more</button>
+            </a>
+        </div>
+
+        <!-- Wishlist -->
+        <div class="card">
+            <h3> <img src="images/icons/heart.png" alt="Wishlist">My Wishlist</h3>
+            <div class="card-content">
+                <div class="items">
+
+                    <div class="wishlist-card">
+                        <img src="images/products/anime.jpg" alt="">
+                    </div>
+
+                    <div class="wishlist-card">
+                        <img src="images/products/anime.jpg" alt="">
+                    </div>
+
+                </div>
+            </div>
+            <a href="wishlist.html">
+                <button class="card-btn">View more</button>
+            </a>
+        </div>
+
+        <!-- Cart -->
+        <div class="card">
+            <h3><img src="images/icons/shopping-cart-16.png" alt="Cart">In my cart</h3>
+            <div class="card-content">
+                <div class="product-item">
+
+                    <div class="product-image">
+                        <img src="images/products/itachi.jpg" alt="Itachi Figure">
+                    </div>
+
+                    <div class="product-details">
+                        <h3>
+                            Anime Itachi Uchiha Action Figure with Crows |
+                            Premium Collectible Statue |
+                            Naruto Shippuden Merchandise
+                        </h3>
+
+                        <div class="price">₹4,499.00</div>
+
+                        <div class="list-price">
+                            List Price: <span><del>₹6,299.00</del></span>
+                        </div>
+
+                        <div class="save">
+                            💸 You Save: ₹1,800 (29%)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="cart.html">
+            <button class="card-btn">View more</button>
+            </a>
+            
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="back-top"><div id=B1><button><span>Back to Top</span></button></div></div>
+<!-- ================= Footer ================= -->
+<footer>
+    <div class="footer">
+        <div class="footer-text" id="f1">
+            <div class="footer-col">
+                <h3 class="footer-h3">Get to Know Us</h3>
+                <p class="footer-p"><a href="#">About Fanfinity</a></p>
+                <p class="footer-p"><a href="#">Our Story</a></p>
+                <p class="footer-p"><a href="#">Project Overview</a></p>
+                <p class="footer-p"><a href="#">Careers (Demo)</a></p>
+                <p class="footer-p"><a href="#">Blog & Updates</a></p>
+            </div>
+        </div>
+         <div class="footer-text" id="f2">
+            <div class="footer-col">
+                <h3 class="footer-h3">Make Money With Us</h3>
+                <p class="footer-p"><a href="#">Sell on Fanfinity</a></p>
+                <p class="footer-p"><a href="#">Become a Partner</a></p>
+                <p class="footer-p"><a href="#">Affiliate Program (Demo)</a></p>
+                <p class="footer-p"><a href="#">Advertise Your Products</a></p>
+                
+            </div>
+        </div>
+        <div class="footer-text" id="f3">
+            <div class="footer-col">
+                <h3 class="footer-h3">Payment & Shopping</h3>
+                <p class="footer-p"><a href="#">Cash on Delivery</a></p>
+                <p class="footer-p"><a href="#">UPI Payments</a></p>
+                <p class="footer-p"><a href="#">Secure Checkout</a></p>
+                <p class="footer-p"><a href="#">Order Summary</a></p>
+                <p class="footer-p"><a href="#">GST Billing</a></p>
+            </div>
+        </div>
+        <div class="footer-text" id="f4">
+            <div class="footer-col">
+                <h3 class="footer-h3">Let Us Help You</h3>
+                <p class="footer-p"><a href="#">Your Account</a></p>
+                <p class="footer-p"><a href="#">Your Orders</a></p>
+                <p class="footer-p"><a href="#">Shipping Policy</a></p>
+                <p class="footer-p"><a href="#">Returns & Replacements</a></p>
+                <p class="footer-p"><a href="#">Help & Support</a></p>
+            </div>
+        </div>
+    </div>
+<hr class="footer-divider">
+<div class="language-region">
+    <h3 class="lang-title">Language & Region</h3>
+    <div class="lang-box">
+        <img src="images/icons/earth-globe.png" alt="rupee">English <span>›</span>
+    </div>
+    <div class="lang-box">
+        <img src="images/icons/rupee.png" alt="rupee">INR - Indian Rupee
+    </div>
+    <div class="lang-box">
+        <img src="images/icons/earth-globe.png" alt="rupee">India <span>›</span>
+    </div>
+</div>
+
+<hr class="footer-divider">
+
+<div class="footer-bottom">
+    <h2 class="brand-name"><img src="images/icons/shopping-cart-16.png" alt="logo">Fanfinity</h2>
+    <p>© 2026 Fanfinity</p>
+    <p>This website is developed as a college academic project.</p>
+    <p>All content and images are used for <b>Educational purposes</b> only.</p>
+</div>
+    
+</footer>
+
+<!-- profile edit MODAL -->
+<div id="profileModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close-btn1" onclick="closeProfileModal()"><big>&times;</big></span>
+
+        <div class="profile-form">
+
+            <h2>Edit Profile</h2>
+
+            <input type="text" placeholder="Enter Username*" required>
+
+            <h3>Address Details</h3>
+
+            <input type="text" placeholder="Street/Locality/Society name*" required>
+            <input type="text" placeholder="City, State*" required>
+            <input type="text" placeholder="Country - Pincode*" required>
+
+            <h3>Contact</h3>
+
+            <input type="text" placeholder="Enter Phone no*" required>
+
+            <button class="submit-btn">Submit</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--<script>
+     //Back to top
+        document.getElementById("B1").addEventListener("click", function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }); 
+            
+        function openMenu(){
+            document.getElementById("sideMenu").classList.add("active");
+            document.getElementById("menuOverlay").classList.add("active");
+        }
+
+        function closeMenu(){
+            document.getElementById("sideMenu").classList.remove("active");
+            document.getElementById("menuOverlay").classList.remove("active");
+        }
+
+        //profile edit form
+        function openProfileModal() {
+            document.getElementById("profileModal").style.display = "block";
+        }
+
+        function closeProfileModal() {
+            document.getElementById("profileModal").style.display = "none";
+        }
+
+        // Close when clicking outside
+        window.onclick = function(event) {
+            let modal = document.getElementById("profileModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }   
+        }
+</script>-->
+<script src="src/scripts/common.js" defer></script>
+
+
+</body>
+</html>

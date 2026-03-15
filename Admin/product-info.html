@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin | Product Information</title>
+    <link rel="stylesheet" href="../css/user-info.css">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body class="product-info-page">
+
+  <!-- Header -->
+<header class="navbar">
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="../images/logo_image.png" alt="Fanfinity Logo" id="img1">
+    </div>
+
+    <div class="page-title">Product Information</div>
+    <a href="Admin.html">
+        <button class="dashboard-btn">Dashboard</button>
+    </a>
+    
+</header>
+
+<!--Back Button-->
+        <a href="Admin.html" class="back-btn">
+            <img src="../images/icons/arrow-93-16.png" alt="Back">
+        </a>
+
+
+         <button class="add-btn" onclick="openProductForm()">ADD +</button>
+
+    <!-- Table -->
+    <table class="data-table product-table">
+        <thead>
+            <tr>
+                <th>Product_id</th>
+                <th>Product</th>
+                <th>Product Category</th>
+                <th>Product name</th>
+                <th>Price</th>
+                <th>Pieces Available</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><img src="../images/products/anime.jpg" class="product-img"></td>
+                <td>Anime</td>
+                <td>wndb</td>
+                <td>3264873</td>
+                <td>35467235</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><img src="../images/products/Anime/15.jpg" class="product-img"></td>
+                <td>Gamming</td>
+                <td>wduuwe</td>
+                <td>726364</td>
+                <td>5267345</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><img src="../images/products/Anime/19.jpg" class="product-img"></td>
+                <td>Movies & Series</td>
+                <td>hdduwgd</td>
+                <td>572365467</td>
+                <td>46723</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><img src="../images/products/Anime/16.jpg" class="product-img"></td>
+                <td>Music</td>
+                <td>hwudhwe</td>
+                <td>7357254732</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+<!-- product input Form -->
+<div class="add-product" id="productModal">
+
+    <div class="product-form-container">
+
+        <span class="close-btn" onclick="closeProductForm()">×</span>
+        <h2>Add New Product</h2>
+
+        <form class="product-form">
+
+            <div class="form-group">
+                <label>Product Name</label>
+                <input type="text" id="productName" placeholder="Enter product name">
+            </div>
+
+            <div class="form-group">
+                <label>Product Image</label>
+                <input type="file" id="productImage">
+            </div>
+
+            <div class="form-group">
+                <label>Description</label>
+                <textarea id="productDesc" placeholder="Enter product description"></textarea>
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label>Price</label>
+                    <input type="number" id="price" placeholder="₹ Price">
+                </div>
+
+                <div class="form-group">
+                    <label>Stock</label>
+                    <input type="number" id="stock" placeholder="Stock quantity">
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label>Category</label>
+                <select id="category">
+                    <option>Anime</option>
+                    <option>Movies & Series</option>
+                    <option>Music</option>
+                    <option>Gaming</option>
+                </select>
+            </div>  
+
+            <button type="button" class="add-product-btn" onclick="addProduct()">
+                Add Product
+            </button>
+
+        </form>
+
+    </div>
+</div>
+
+<script src="../src/scripts/pages/product-info.js" defer></script>
+
+</body>
+</html>

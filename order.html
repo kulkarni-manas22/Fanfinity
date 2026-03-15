@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fanfinity | Orders</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/order.css">
+</head>
+<body>
+
+    <!-- ================= HEADER ================= -->
+<header class="navbar">
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="images/Logos/logo_image.png" alt="Fanfinity Logo" id="img1">
+    </div>
+
+    <!--login button
+    <nav>
+        <button class="btn" id="loginBtn">Login</button>
+    </nav>-->
+
+    
+
+    <!--location dropdown-->
+    <div class="nav-center">
+        <div class="location">
+            <select>
+                <option>Select Location📍</option>
+                <option>New York</option>
+                <option>Los Angeles</option>
+                <option>Chicago</option>
+                <option>Houston</option>
+                <option>India</option>
+            </select>
+        </div>
+
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="search" placeholder="Search">
+            <img src="images/icons/search.png" alt="search">
+            <!--<span class="search-icon">🔍</span>-->
+        </div>
+    
+        <!-- Right Icons -->
+        <div class="nav-icons">
+             <div class="icon-circle" id="home1">
+                <a href="home.html" >
+                    <img src="images/icons/home-agreement.png" alt="Menu" >
+                </a>
+            </div>
+            <a href="wishlist.html">
+                <div class="icon-circle" id="heart1">
+                        <img src="images/icons/heart.png" alt="Cart"><br>
+                </div>
+            </a>
+            <div class="icon-circle" id="cart1">
+                <a href="cart.html">
+                <img src="images/icons/shopping-bag.png" alt="Cart"><br>
+                </a>
+            </div>
+            <div class="icon-circle" onclick="openMenu()">
+                <img src="images/icons/app-removebg-preview.png" alt="Menu" >
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ================= Side Menu ================= -->
+<!-- Side Menu -->
+<div class="side-menu" id="sideMenu">
+    <div class="close">
+        <span class="close-btn" onclick="closeMenu()">×</span>
+    </div>
+    <div class="menu-header">
+        <!--<h2>Menu</h2>-->
+        <img src="images/Logos/logo_image.png" alt="fanfinity Logo" class="logo">
+    </div>
+    <div class="links-grp">
+        <a href="profile.html">
+            <div class="list-links">
+                <img src="images/icons/user-16.png" alt="User" ><p>Profile </p><span>›</span>
+            </div>
+        </a>
+        <div class="list-links">
+            <img src="images/icons/purchase-order-16.png" alt="Orders" ><p>Orders</p> <span>›</span>
+        </div>
+        <div class="list-links">
+            <img src="images/icons/call.png" alt="ContactUs" ><p>Contact Us</p> <span>›</span>
+        </div>
+        
+        
+        <button class="logout-btn" id="logOutBtn">Log-out</button>
+        
+    </div>
+    
+
+</div>
+
+
+<!--================== orders =================-->
+
+<div class="orders-container">
+
+    <h2 class="orders-title">
+        📋 Your Orders
+    </h2>
+
+    <div class="orders-grid">
+
+        <!-- Yet To Be Delivered -->
+        <div class="order-section">
+            <div class="section-label">Yet To Be Delivered</div>
+
+            <!-- Order Card -->
+            <div class="order-card">
+                <img src="images/products/itachi.jpg" alt="Spider Hold">
+
+                <div class="order-details">
+                    <h4>WebGrip Hero Gaming Controller Figurine | Spider-Inspired Desk Décor</h4>
+                    <p class="price">₹1,299.00</p>
+                    <p class="list">List Price: <span>₹1,799.00</span></p>
+                    <p class="save">You Save: ₹500 (28%)</p>
+                    <p class="delivery">FREE Delivery: Tue, Mar 12</p>
+                    <p>⭐ 4.6</p>
+                </div>
+            </div>
+            
+
+            <!-- Second Card -->
+            <div class="order-card">
+                <img src="images/products/itachi.jpg" alt="BT21 Soft">
+
+                <div class="order-details">
+                    <h4>BT21-Inspired Cute Plush Soft Toys Set</h4>
+                    <p class="price">₹1,899.00</p>
+                    <p class="list">List Price: <span>₹2,699.00</span></p>
+                    <p class="save">You Save: ₹800 (30%)</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Previously Delivered -->
+        <div class="order-section">
+            <div class="section-label">Previously Delivered</div>
+
+            <div class="order-card">
+                <img src="images/products/itachi.jpg" alt="Itachi Figure">
+
+                <div class="order-details">
+                    <h4>Anime Itachi Uchiha Action Figure with Crows</h4>
+                    <p class="price">₹4,499.00</p>
+                    <p class="list">List Price: <span>₹6,299.00</span></p>
+                    <p class="save">You Save: ₹1,800 (29%)</p>
+                    <p class="delivery">Delivered on: Tue, Mar 12</p>
+                    <p>⭐ 4.6</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= Footer ================= -->
+<div class="back-top"><div id=B1><button><span>Back to Top</span></button></div></div>
+<footer>
+    <div class="footer">
+        <div class="footer-text" id="f1">
+            <div class="footer-col">
+                <h3 class="footer-h3">Get to Know Us</h3>
+                <p class="footer-p"><a href="#">About Fanfinity</a></p>
+                <p class="footer-p"><a href="#">Our Story</a></p>
+                <p class="footer-p"><a href="#">Project Overview</a></p>
+                <p class="footer-p"><a href="#">Careers (Demo)</a></p>
+                <p class="footer-p"><a href="#">Blog & Updates</a></p>
+            </div>
+        </div>
+         <div class="footer-text" id="f2">
+            <div class="footer-col">
+                <h3 class="footer-h3">Make Money With Us</h3>
+                <p class="footer-p"><a href="#">Sell on Fanfinity</a></p>
+                <p class="footer-p"><a href="#">Become a Partner</a></p>
+                <p class="footer-p"><a href="#">Affiliate Program (Demo)</a></p>
+                <p class="footer-p"><a href="#">Advertise Your Products</a></p>
+                
+            </div>
+        </div>
+        <div class="footer-text" id="f3">
+            <div class="footer-col">
+                <h3 class="footer-h3">Payment & Shopping</h3>
+                <p class="footer-p"><a href="#">Cash on Delivery</a></p>
+                <p class="footer-p"><a href="#">UPI Payments</a></p>
+                <p class="footer-p"><a href="#">Secure Checkout</a></p>
+                <p class="footer-p"><a href="#">Order Summary</a></p>
+                <p class="footer-p"><a href="#">GST Billing</a></p>
+            </div>
+        </div>
+        <div class="footer-text" id="f4">
+            <div class="footer-col">
+                <h3 class="footer-h3">Let Us Help You</h3>
+                <p class="footer-p"><a href="#">Your Account</a></p>
+                <p class="footer-p"><a href="#">Your Orders</a></p>
+                <p class="footer-p"><a href="#">Shipping Policy</a></p>
+                <p class="footer-p"><a href="#">Returns & Replacements</a></p>
+                <p class="footer-p"><a href="#">Help & Support</a></p>
+            </div>
+        </div>
+    </div>
+<hr class="footer-divider">
+<div class="language-region">
+    <h3 class="lang-title">Language & Region</h3>
+    <div class="lang-box">
+        <img src="images/icons/earth-globe.png" alt="rupee">English <span>›</span>
+    </div>
+    <div class="lang-box">
+        <img src="images/icons/rupee.png" alt="rupee">INR - Indian Rupee
+    </div>
+    <div class="lang-box">
+        <img src="images/icons/earth-globe.png" alt="rupee">India <span>›</span>
+    </div>
+</div>
+
+<hr class="footer-divider">
+
+<div class="footer-bottom">
+    <h2 class="brand-name"><img src="images/icons/shopping-cart-16.png" alt="logo">Fanfinity</h2>
+    <p>© 2026 Fanfinity</p>
+    <p>This website is developed as a college academic project.</p>
+    <p>All content and images are used for <b>Educational purposes</b> only.</p>
+</div>
+    
+</footer>
+
+
+<!--<script>
+     //Back to top working
+        document.getElementById("B1").addEventListener("click", function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }); 
+        //Menu working
+        function openMenu(){
+            document.getElementById("sideMenu").classList.add("active");
+            document.getElementById("menuOverlay").classList.add("active");
+        }
+
+        function closeMenu(){
+            document.getElementById("sideMenu").classList.remove("active");
+            document.getElementById("menuOverlay").classList.remove("active");
+        }
+</script>-->
+<script src="src/scripts/common.js" defer></script>
+
+</body>
+</html>

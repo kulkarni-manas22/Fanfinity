@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fanfinity | Movies</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/Movies.css">
+    <link rel="stylesheet" href="../css/product-modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="movies-page">
+
+    <!-- ================= HEADER ================= -->
+<header class="navbar-category5">
+
+    <!-- Logo -->
+    <div class="logo-category5">
+        <img src="../images/Logos/movieserieslogo_withoutbg.png" alt="Fanfinity Logo" id="img1">
+    </div>
+
+    <!--login button
+    <nav>
+        <button class="btn" id="loginBtn">Login</button>
+    </nav>-->
+
+    
+
+    <!--location dropdown-->
+    <div class="nav-center-category5">
+        <div class="location-category5">
+            <select id="subcategory">
+                <option value="">Select Categories</option>
+                <option value="Movies.html">Movies</option>
+                <option value="Series.html">Series</option>
+            </select>
+        </div>
+
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="search" placeholder="Search">
+            <img src="../images/icons/search.png" alt="search">
+            <!--<span class="search-icon">🔍</span>-->
+        </div>
+    
+        <!-- Right Icons -->
+        <div class="nav-icons-category5">
+             <div class="icon-circle-category5" id="home1">
+                <a href="../home.html" >
+                <img src="../images/icons/home-agreement.png" alt="Menu" >
+                </a>
+            </div>
+            <div class="icon-circle-category5" id="heart1">
+                <a href="../wishlist.html">
+                <img src="../images/icons/heart.png" alt="Cart"><br>
+                </a>
+            </div>
+            <div class="icon-circle-category5" id="cart1">
+                <a href="../cart.html">
+                <img src="../images/icons/shopping-bag.png" alt="Cart"><br>
+                </a>
+            </div>
+            <div class="icon-circle-category5" onclick="openMenu()">
+                <img src="../images/icons/app-removebg-preview.png" alt="Menu" >
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ================= Side Menu ================= -->
+<!-- Side Menu -->
+ <!-- Overlay -->
+<div class="menu-overlay-category5" id="menuOverlay" onclick="closeMenu()"></div>
+
+<div class="side-menu-category5" id="sideMenu">
+    <div class="close-category5">
+        <span class="close-btn-category5" onclick="closeMenu()">×</span>
+    </div>
+    <div class="menu-header-category5">
+        <!--<h2>Menu</h2>-->
+        <img src="../images/Logos/movieserieslogo_withoutbg.png" alt="fanfinity Logo" class="logo-category5">
+    </div>
+    <div class="links-grp-category5">
+        <a href="../profile.html">
+            <div class="list-links-category5">
+                <img src="../images/icons/user-movies.png" alt="User" ><p>Profile </p><span>›</span>
+            </div>
+        </a>
+        <a href="../order.html">
+            <div class="list-links-category5">
+                <img src="../images/icons/purchase-order-moviespng.png" alt="Orders" ><p>Orders</p> <span>›</span>
+            </div>
+        </a>
+        <div class="list-links-category5">
+            <img src="../images/icons/phone-movies.png" alt="ContactUs" ><p>Contact Us</p> <span>›</span>
+        </div>
+        <button class="logout-btn-category5" id="logOutBtn">Log-out</button>
+    </div>
+</div>
+
+
+<section class="pinterest-section-category5">
+
+    <!--<div class="grid-class"></div>-->
+    <div class="vault-header">
+        <a href="../category/Movies_Series.html" class="back-btn">
+            <img src="../images/icons/arrow-movies.png" alt="Back">
+        </a>
+        <h2 class="grid-title-category5"><img src="../images/icons/movie_ondisplay.png" alt="Movies logo" ></h2>
+    </div>
+
+    <div class="masonry-grid-category5">
+        <!-- remove all these products which is manually added and only keep this
+         -> <div class="masonry-grid-category5" id="productContainer" data-category="movies"></div>-->
+        <div class="masonry-item-category5">
+            <img src="../images/products/anime.jpg">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+        </div>
+
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>
+            </div>
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+            
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+            
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+            
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+            
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+            
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+            
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+            
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+            
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+            
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+           
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+           
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+           
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/itachi.jpg">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+            
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+            
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+            
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+            
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+            
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+            
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+            
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+            
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/itachi.jpg">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+            
+        </div>
+        <div class="masonry-item-category5">
+            <img src="../images/products/anime.jpg">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions-category5">
+                    <button class="cart-btn-category5"><img src="../images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now-category5"><span>BUY</span></button>
+                    <button class="cart-btn-category5"><img src="../images/icons/heart.png" alt="Heart"></button>
+                </div>-->
+            </div>
+
+        </div>
+    </div>
+
+    <!--Infinite Scroll-->
+    <div id="scrollTrigger"></div>
+    <div id="loader" style="text-align:center; padding:20px; display:none;">
+        Loading more products...
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ================= Footer ================= -->
+<div class="back-top-category5"><div id="B1-category5"><button><span>Back to Top</span></button></div></div>
+<footer>
+    <div class="footer-category5">
+        <div class="footer-text-category5" id="f1">
+            <div class="footer-col">
+                <h3 class="footer-h3">Get to Know Us</h3>
+                <p class="footer-p"><a href="#">About Fanfinity</a></p>
+                <p class="footer-p"><a href="#">Our Story</a></p>
+                <p class="footer-p"><a href="#">Project Overview</a></p>
+                <p class="footer-p"><a href="#">Careers (Demo)</a></p>
+                <p class="footer-p"><a href="#">Blog & Updates</a></p>
+            </div>
+        </div>
+         <div class="footer-text-category5" id="f2">
+            <div class="footer-col">
+                <h3 class="footer-h3">Make Money With Us</h3>
+                <p class="footer-p"><a href="#">Sell on Fanfinity</a></p>
+                <p class="footer-p"><a href="#">Become a Partner</a></p>
+                <p class="footer-p"><a href="#">Affiliate Program (Demo)</a></p>
+                <p class="footer-p"><a href="#">Advertise Your Products</a></p>
+                
+            </div>
+        </div>
+        <div class="footer-text-category5" id="f3">
+            <div class="footer-col">
+                <h3 class="footer-h3">Payment & Shopping</h3>
+                <p class="footer-p"><a href="#">Cash on Delivery</a></p>
+                <p class="footer-p"><a href="#">UPI Payments</a></p>
+                <p class="footer-p"><a href="#">Secure Checkout</a></p>
+                <p class="footer-p"><a href="#">Order Summary</a></p>
+                <p class="footer-p"><a href="#">GST Billing</a></p>
+            </div>
+        </div>
+        <div class="footer-text-category5" id="f4">
+            <div class="footer-col">
+                <h3 class="footer-h3">Let Us Help You</h3>
+                <p class="footer-p"><a href="#">Your Account</a></p>
+                <p class="footer-p"><a href="#">Your Orders</a></p>
+                <p class="footer-p"><a href="#">Shipping Policy</a></p>
+                <p class="footer-p"><a href="#">Returns & Replacements</a></p>
+                <p class="footer-p"><a href="#">Help & Support</a></p>
+            </div>
+        </div>
+    </div>
+<hr class="footer-divider">
+<div class="language-region-category5">
+    <h3 class="lang-title-category5">Language & Region</h3>
+    <div class="lang-box-category5">
+        <img src="../images/icons/earth-globe.png" alt="rupee">English <span>›</span>
+    </div>
+    <div class="lang-box-category5">
+        <img src="../images/icons/rupee.png" alt="rupee">INR - Indian Rupee
+    </div>
+    <div class="lang-box-category5">
+        <img src="../images/icons/earth-globe.png" alt="rupee">India <span>›</span>
+    </div>
+</div>
+
+<hr class="footer-divider">
+
+<div class="footer-bottom-category5">
+    <h2 class="brand-name-category5"><img src="../images/icons/cart-movies.png" alt="logo">Fanfinity</h2>
+    <p>© 2026 Fanfinity</p>
+    <p>This website is developed as a college academic project.</p>
+    <p>All content and ../images are used for <b>Educational purposes</b> only.</p>
+</div>
+    
+</footer>
+
+<!-- Product Modal -->
+<div id="productModal" class="product-modal">
+
+    <div class="modal-content">
+
+        <span class="close-btn">&times;</span>
+
+        <div class="image-wrapper">
+            <div class="modal-left">
+                <img id="modalImage" src="" alt="Product Image">
+                
+                <button id="wishlistBtn" class="wishlist-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="modal-right">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            
+            <div class="price-product">
+                <span id="modalPrice"></span><br>
+            </div>
+            <span id="modalListPrice"></span>
+
+            <div class="save-product">
+                 <span id="modalsave"></span>
+            </div>
+
+            <div class="Rating-product">
+                <span id="modalRating"></span>
+            </div>
+             <div class="button-group">
+                <button class="buy-btn">Buy Now</button>
+                <button class="cart-btn-product">Add to Cart</button>
+            </div>
+            <div class="more-info">
+                <div id="modalmoreInfo">
+                    <h4>Capacity & Dimensions</h4>
+                    <ul class="product-specs">                        
+                        <li><strong>Capacity:</strong> 600 ml</li>
+                        <li><strong>Height:</strong> Approx. 18 cm</li>
+                        <li><strong>Diameter:</strong> Approx. 8.5 cm</li>
+                        <li><strong>Weight:</strong> ~450 g</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="more-info">
+                <div id="modalMaterialInfo">
+                    <h4>Material & Build</h4>
+                    <ul class="product-specs">
+                        <li><strong>Material:</strong> Food-grade Stainless Steel (Interior & Exterior)</li>
+                        <li><strong>Finish:</strong> Matte premium coating with high-resolution printed design</li>
+                        <li><strong>Lid Material:</strong> BPA-free plastic</li>
+                        <li><strong>Handle:</strong> Integrated sturdy grip handle</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="../src/scripts/common.js" defer></script>
+<script src="../src/scripts/pages/movies.js" defer></script>
+<script src="../src/scripts/products-load.js" defer></script>
+</body>
+</html>

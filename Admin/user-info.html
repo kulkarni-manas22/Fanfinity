@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin | User Information</title>
+    <link rel="stylesheet" href="../css/user-info.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/Admin.css">
+</head>
+<body class="user-info-page">
+
+    <!-- Header -->
+<header class="navbar">
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="../images/logo_image.png" alt="Fanfinity Logo" id="img1">
+    </div>
+
+    <div class="page-title">User Information</div>
+    <a href="Admin.html">
+        <button class="dashboard-btn">Dashboard</button>
+    </a>
+    
+</header>
+
+ <!-- Back Button -->
+ 
+ <!-- Total Users Card -->
+        <a href="Admin.html" class="back-btn">
+            <img src="../images/icons/arrow-93-16.png" alt="Back">
+        </a>
+    
+    <div class="stat-card">
+        <div class="stat-title">Total Users</div>
+        <div class="stat-number" id="totalUsers">0</div>
+    </div>
+
+     <table class="data-table">
+        <thead>
+            <tr>
+                <th>User_id</th>
+                <th>name</th>
+                <th>Email</th>
+                <th>Phone no</th>
+                <th>order_id</th>
+                <th>Product purchased</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>status</th>
+            </tr>
+        </thead>
+        <tbody id="userTableBody">
+            
+        </tbody>
+    </table>
+
+
+    <script src="../src/scripts/pages/user-info.js" defer></script>
+    <script src="../src/scripts/admin/Admin_load_Nos.js" defer></script>
+
+</body>
+</html>

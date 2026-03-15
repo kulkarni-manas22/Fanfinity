@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Category Wheel</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/Wheel_1.css">
+</head>
+<body>
+
+<div class="wheel-wrap">
+
+  <!-- ── SVG ring + rotated text labels only ──
+    viewBox 640x640, centre (320,320)
+    Ring outer r=320, inner r=250, thickness=70px
+    Label radius r=285
+
+    Quadrant label positions (SVG angles 0=right 90=down):
+      TL 225° → (118.5, 118.5) rotate(-45°)
+      TR 315° → (521.5, 118.5) rotate(+45°)
+      BL 135° → (118.5, 521.5) rotate(+45°)
+      BR  45° → (521.5, 521.5) rotate(-45°)
+  -->
+  <svg class="ring-svg" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="ts" x="-40%" y="-40%" width="180%" height="180%">
+        <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,.8)"/>
+      </filter>
+    </defs>
+    <!-- orange ring -->
+    <circle cx="320" cy="320" r="320" fill="#e8650a"/>
+    <circle cx="320" cy="320" r="317" fill="none" stroke="#f5a040" stroke-width="3" opacity=".5"/>
+    <circle cx="320" cy="320" r="311" fill="none" stroke="#c94d00" stroke-width="1.5" opacity=".3"/>
+    <circle cx="320" cy="320" r="253" fill="none" stroke="#c94d00" stroke-width="4"/>
+    <!-- punch out inner disc -->
+    <circle cx="320" cy="320" r="250" fill="#f2f0eb"/>
+    <!-- labels -->
+    <text x="118.5" y="118.5"
+      text-anchor="middle" dominant-baseline="middle"
+      font-family="Bangers,cursive" font-size="30" letter-spacing="4" fill="#fff"
+      filter="url(#ts)" transform="rotate(-45,118.5,118.5)">Anime</text>
+    <text x="521.5" y="118.5"
+      text-anchor="middle" dominant-baseline="middle"
+      font-family="Bangers,cursive" font-size="30" letter-spacing="4" fill="#fff"
+      filter="url(#ts)" transform="rotate(45,521.5,118.5)">Movies</text>
+    <text x="118.5" y="521.5"
+      text-anchor="middle" dominant-baseline="middle"
+      font-family="Bangers,cursive" font-size="30" letter-spacing="4" fill="#fff"
+      filter="url(#ts)" transform="rotate(45,118.5,521.5)">Games</text>
+    <text x="521.5" y="521.5"
+      text-anchor="middle" dominant-baseline="middle"
+      font-family="Bangers,cursive" font-size="30" letter-spacing="4" fill="#fff"
+      filter="url(#ts)" transform="rotate(-45,521.5,521.5)">Music</text>
+  </svg>
+
+  <!-- ── inner disc ── -->
+  <div class="disc">
+
+    <!-- orange cross dividers -->
+    <div class="div-v"></div>
+    <div class="div-h"></div>
+
+    <!-- TL: ANIME -->
+    <div class="quad quad-tl">
+      <div class="img-box" onclick="goTo('anime')" title="Anime">
+        <img src="images/products/movies/16.jpg">
+      </div>
+    </div>
+
+    <!-- TR: MOVIES/SERIES -->
+    <div class="quad quad-tr">
+      <div class="img-box" onclick="goTo('movies')" title="Movies/Series">
+        
+        <img src="images/products/movies/16.jpg">
+      </div>
+    </div>
+
+    <!-- BL: GAMES -->
+    <div class="quad quad-bl">
+      <div class="img-box" onclick="goTo('games')" title="Games">
+       
+        <img src="images/products/movies/16.jpg">
+      </div>
+    </div>
+
+    <!-- BR: MUSIC/POP -->
+    <div class="quad quad-br">
+      <div class="img-box" onclick="goTo('music')" title="Music/Pop">
+        <img src="images/products/movies/16.jpg">
+      </div>
+    </div>
+
+    <!-- centre circle: same orange as ring, yellow star -->
+    <div class="center-circle">
+      <svg width="40" height="40" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+        <polygon
+          points="30,3 36.8,21.4 56.3,21.4 41,33.4 46.4,51.9 30,40.4 13.6,51.9 19,33.4 3.7,21.4 23.2,21.4"
+          fill="#FFE234" stroke="#cc8800" stroke-width="1.5" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+  </div><!-- /disc -->
+</div><!-- /wheel-wrap -->
+
+<div id="toast"></div>
+
+<script src="src/scripts/common.js" defer></script>
+<script src="src/scripts/pages/wheel_1.js" defer></script>
+</body>
+</html>

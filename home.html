@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fanfinity | Home</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/product-modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="home-page">
+
+<!-- ================= HEADER ================= -->
+<header class="navbar">
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="images/Logos/logo_image.png" alt="Fanfinity Logo" id="img1">
+    </div>
+
+    <!--login button-->
+    <nav>
+        <button class="btn" id="loginBtn">Login</button>
+    </nav>
+
+    
+
+    <!--location dropdown-->
+    <div class="nav-center">
+        <div class="location">
+            <select>
+                <option>Select Location📍</option>
+                <option>New York</option>
+                <option>Los Angeles</option>
+                <option>Chicago</option>
+                <option>Houston</option>
+                <option>India</option>
+            </select>
+        </div>
+
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="search" placeholder="Search">
+            <img src="images/icons/search.png" alt="search">
+            <!--<span class="search-icon">🔍</span>-->
+        </div>
+    
+        <!-- Right Icons -->
+        <div class="nav-icons">
+       
+            <a href="wishlist.html">
+                <div class="icon-circle" id="heart1">
+                    <img src="images/icons/heart.png" alt="Cart"><br>
+                </div>
+            </a>
+            <a href="cart.html">
+                <div class="icon-circle" id="cart1">
+                    <img src="images/icons/shopping-bag.png" alt="Cart"><br>
+                </div>
+            </a>
+            <div class="icon-circle" onclick="openMenu()">
+                <img src="images/icons/app-removebg-preview.png" alt="Menu" >
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Overlay -->
+<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+
+
+<!-- ================= Side Menu ================= -->
+<!-- Side Menu -->
+<div class="side-menu" id="sideMenu">
+    <div class="close">
+        <span class="close-btn" onclick="closeMenu()">×</span>
+    </div>
+    <div class="menu-header">
+        <!--<h2>Menu</h2>-->
+        <img src="images/Logos/logo_image.png" alt="fanfinity Logo" class="logo">
+    </div>
+    <div class="links-grp">
+        <a href="profile.html">
+            <div class="list-links">
+                <img src="images/icons/user-16.png" alt="User" ><p>Profile </p><span>›</span>
+            </div>
+        </a>
+        <div class="list-links">
+            <img src="images/icons/purchase-order-16.png" alt="Orders" ><p>Orders</p> <span>›</span>
+        </div>
+        <div class="list-links">
+            <img src="images/icons/call.png" alt="ContactUs" ><p>Contact Us</p> <span>›</span>
+        </div>
+        
+        
+        <button class="logout-btn" id="logOutBtn">Log-out</button>
+        
+    </div>
+    
+
+</div>
+
+
+
+<!-- ================= NEWLY RELEASED ================= -->
+<section class="section newly-launched">
+
+    <h2 class="section-title">Newly released🚀</h2>
+
+    <!--<div class="products-row">
+
+        <img src="images/products/fanfinity.png" alt="">
+        <img src="images/products/fanfinity.png" alt="">
+        <img src="images/products/fanfinity.png" alt="">
+        <img src="images/products/fanfinity.png" alt="">
+        <img src="images/products/fanfinity.png" alt="">
+        <img src="images/products/fanfinity.png" alt="">
+        <img src="images/products/fanfinity.png" alt="">
+        <img src="images/products/fanfinity.png" alt="">
+        <img src="images/products/fanfinity.png" alt="">
+        <img src="images/products/fanfinity.png" alt="">
+        <img src="images/products/fanfinity.png" alt="">
+        <img src="images/products/fanfinity.png" alt="">
+        <img src="images/products/fanfinity.png" alt="">
+        <img src="images/products/product2.jpg" alt="">
+        <img src="images/products/product3.jpg" alt="">
+        <img src="images/products/product4.jpg" alt="">
+        <img src="images/products/product5.jpg" alt="">
+
+    </div>-->
+
+     <div class="products-wrapper">
+         <div class="products-track">
+            <!-- remove all these products which is manually added and only keep this
+         -> <div class="products-track" id="newTrack"></div>-->
+            <div class="product-card">
+                <img src="images/products/fanfinity.png" alt="">
+                <h4>Product Name</h4>
+                <p class="price">₹999</p>
+                <p class="rating">⭐⭐⭐⭐☆</p>
+            </div>
+            <div class="product-card">
+                <img src="images/products/fanfinity.png" alt="">
+                <h4>Product Name</h4>
+                <p class="price">₹999</p>
+                <p class="rating">⭐⭐⭐⭐☆</p>
+            </div>
+            <div class="product-card">
+                <img src="images/products/fanfinity.png" alt="">
+                <h4>Product Name</h4>
+                <p class="price">₹999</p>
+                <p class="rating">⭐⭐⭐⭐☆</p>
+            </div>
+            <div class="product-card">
+                <img src="images/products/fanfinity.png" alt="">
+                <h4>Product Name</h4>
+                <p class="price">₹999</p>
+                <p class="rating">⭐⭐⭐⭐☆</p>
+            </div>
+            <div class="product-card">
+                <img src="images/products/fanfinity.png" alt="">
+                <h4>Product Name</h4>
+                <p class="price">₹999</p>
+                <p class="rating">⭐⭐⭐⭐☆</p>
+            </div>
+            <div class="product-card">
+                <img src="images/products/fanfinity.png" alt="">
+                <h4>Product Name</h4>
+                <p class="price">₹999</p>
+                <p class="rating">⭐⭐⭐⭐☆</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/products/fanfinity.png" alt="">
+                <h4>Product Name</h4>
+                <p class="price">₹799</p>
+                <p class="rating">⭐⭐⭐⭐⭐</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/products/fanfinity.png" alt="">
+                <h4>Product Name</h4>
+                <p class="price">₹1299</p>
+                <p class="rating">⭐⭐⭐☆☆</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/products/fanfinity.png" alt="">
+                <h4>Product Name</h4>
+                <p class="price">₹999</p>
+                <p class="rating">⭐⭐⭐⭐☆</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/products/fanfinity.png" alt="">
+                <h4>Product Name</h4>
+                <p class="price">₹999</p>
+                <p class="rating">⭐⭐⭐⭐☆</p>
+            </div>
+        
+
+            <!--duplicate products-->
+
+            <div class="product-card">
+                <img src="images/products/fanfinity.png" alt="">
+                <h4>Product Name</h4>
+                <p class="price">₹999</p>
+                <p class="rating">⭐⭐⭐⭐☆</p>
+            </div>
+            <div class="product-card">
+                <img src="images/products/fanfinity.png" alt="">
+                <h4>Product Name</h4>
+                <p class="price">₹999</p>
+                <p class="rating">⭐⭐⭐⭐☆</p>
+            </div>
+            <div class="product-card">
+                <img src="images/products/fanfinity.png" alt="">
+                <h4>Product Name</h4>
+                <p class="price">₹999</p>
+                <p class="rating">⭐⭐⭐⭐☆</p>
+            </div>
+            <div class="product-card">
+                <img src="images/products/fanfinity.png" alt="">
+                <h4>Product Name</h4>
+                <p class="price">₹999</p>
+                <p class="rating">⭐⭐⭐⭐☆</p>
+            </div>
+            <div class="product-card">
+                <img src="images/products/fanfinity.png" alt="">
+                <h4>Product Name</h4>
+                <p class="price">₹999</p>
+                <p class="rating">⭐⭐⭐⭐☆</p>
+            </div>
+            <div class="product-card">
+                <img src="images/products/fanfinity.png" alt="">
+                <h4>Product Name</h4>
+                <p class="price">₹999</p>
+                <p class="rating">⭐⭐⭐⭐☆</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/products/fanfinity.png" alt="">
+                <h4>Product Name</h4>
+                <p class="price">₹799</p>
+                <p class="rating">⭐⭐⭐⭐⭐</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/products/fanfinity.png" alt="">
+                <h4>Product Name</h4>
+                <p class="price">₹1299</p>
+                <p class="rating">⭐⭐⭐☆☆</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="images/products/fanfinity.png" alt="">
+                <h4>Product Name</h4>
+                <p class="price">₹999</p>
+                <p class="rating">⭐⭐⭐⭐☆</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/products/fanfinity.png" alt="">
+                <h4>Product Name</h4>
+                <p class="price">₹999</p>
+                <p class="rating">⭐⭐⭐⭐☆</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Explore Button -->
+    <button id="exploreBtn" type="button">
+        <div class="explore-btn">
+            <div class="explore-btn1">
+                Explore <br> Categories
+            </div>
+        </div>
+    </button>
+    
+
+
+</section>
+
+
+<!-- ================= TRENDING & RECOMMENDATIONS ================= -->
+<section class="bottom-sections">
+
+    <!-- Trending -->
+    <div class="section trending">
+
+        <h2 class="section-title">Popular🔥</h2>
+
+        <!--products-->
+        <div class="products-wrapper">
+            <div class="products-track">
+                <!-- remove all these products which is manually added and only keep this
+         -> <div class="products-track" id="popularTrack"></div>-->
+                <div class="product-card">
+                    <img src="images/products/fanfinity.png" alt="">
+                    <h4>Product Name</h4>
+                    <p class="price">₹999</p>
+                    <p class="rating">⭐⭐⭐⭐☆</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/products/fanfinity.png" alt="">
+                    <h4>Product Name</h4>
+                    <p class="price">₹999</p>
+                    <p class="rating">⭐⭐⭐⭐☆</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/products/fanfinity.png" alt="">
+                    <h4>Product Name</h4>
+                    <p class="price">₹999</p>
+                    <p class="rating">⭐⭐⭐⭐☆</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/products/fanfinity.png" alt="">
+                    <h4>Product Name</h4>
+                    <p class="price">₹999</p>
+                    <p class="rating">⭐⭐⭐⭐☆</p>
+                </div>
+
+
+                <!--duplicate products-->
+
+                <div class="product-card">
+                    <img src="images/products/fanfinity.png" alt="">
+                    <h4>Product Name</h4>
+                    <p class="price">₹999</p>
+                    <p class="rating">⭐⭐⭐⭐☆</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/products/fanfinity.png" alt="">
+                    <h4>Product Name</h4>
+                    <p class="price">₹999</p>
+                    <p class="rating">⭐⭐⭐⭐☆</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/products/fanfinity.png" alt="">
+                    <h4>Product Name</h4>
+                    <p class="price">₹999</p>
+                    <p class="rating">⭐⭐⭐⭐☆</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/products/fanfinity.png" alt="">
+                    <h4>Product Name</h4>
+                    <p class="price">₹999</p>
+                    <p class="rating">⭐⭐⭐⭐☆</p>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <!--gift button-->
+        <button type="button">
+            <div class="gift-icon">
+                <img src="images/icons/gifts.png" alt="">
+            </div>
+        </button>
+    </div>
+
+
+    <!-- Recommendations -->
+
+
+    <div class="section recommendations">
+
+        <h2 class="section-title">Recommendations👀</h2>
+        <div class="products-wrapper">
+            <div class="products-track">
+                <!-- remove all these products which is manually added and only keep this
+         -> <div class="products-track" id="recommendedTrack"></div>-->
+                <div class="product-card">
+                    <img src="images/products/fanfinity.png" alt="">
+                    <h4>Product Name</h4>
+                    <p class="price">₹999</p>
+                    <p class="rating">⭐⭐⭐⭐☆</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/products/fanfinity.png" alt="">
+                    <h4>Product Name</h4>
+                    <p class="price">₹999</p>
+                    <p class="rating">⭐⭐⭐⭐☆</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/products/fanfinity.png" alt="">
+                    <h4>Product Name</h4>
+                    <p class="price">₹999</p>
+                    <p class="rating">⭐⭐⭐⭐☆</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/products/fanfinity.png" alt="">
+                    <h4>Product Name</h4>
+                    <p class="price">₹999</p>
+                    <p class="rating">⭐⭐⭐⭐☆</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/products/fanfinity.png" alt="">
+                    <h4>Product Name</h4>
+                    <p class="price">₹999</p>
+                    <p class="rating">⭐⭐⭐⭐☆</p>
+                </div>
+                
+                
+
+                <!--duplicate products-->
+
+                <div class="product-card">
+                    <img src="images/products/fanfinity.png" alt="">
+                    <h4>Product Name</h4>
+                    <p class="price">₹999</p>
+                    <p class="rating">⭐⭐⭐⭐☆</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/products/fanfinity.png" alt="">
+                    <h4>Product Name</h4>
+                    <p class="price">₹999</p>
+                    <p class="rating">⭐⭐⭐⭐☆</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/products/fanfinity.png" alt="">
+                    <h4>Product Name</h4>
+                    <p class="price">₹999</p>
+                    <p class="rating">⭐⭐⭐⭐☆</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/products/fanfinity.png" alt="">
+                    <h4>Product Name</h4>
+                    <p class="price">₹999</p>
+                    <p class="rating">⭐⭐⭐⭐☆</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/products/fanfinity.png" alt="">
+                    <h4>Product Name</h4>
+                    <p class="price">₹999</p>
+                    <p class="rating">⭐⭐⭐⭐☆</p>
+                </div>
+            </div><!--class track closed-->
+        </div><!--class wrapper closed-->
+    </div><!--section div closed-->
+</section>
+
+<div class="divider"></div>
+
+<!-- ================= Pinterest-Grid ================= -->
+<section class="pinterest-section">
+
+    <!--<div class="grid-class"></div>-->
+        <h2 class="grid-title">Explore More...</h2>
+
+    <div class="masonry-grid">
+        <!-- remove all these products which is manually added and only keep this
+         -> <div class="masonry-grid" id="productContainer" data-category="home"></div>-->
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Heart"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action | Figure with Crows | Premium
+                    Collectible Statue | Naruto| Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price:<del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Product Title</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Anime Itachi Uchiha Action
+                    Figure with Crows | Premium
+                    Collectible Statue | Naruto
+                    Shippuden Merchandise</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Product Title</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>BT21-Inspired Cute Plush
+                    Soft Toys Set | Ultra-Soft
+                    Stuffed Cushions | K-Pop
+                    Collectible </h4>
+                <p class="price1">₹1,899.00</p>
+                <p class="list-price">List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Product Title</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Product Title</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Product Title</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Product Title</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Product Title</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Product Title</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Product Title</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Product Title</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Product Title</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/fanfinity.png">
+            <div class="product-info">
+                <h4>Product Title</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price: <del>₹2,699.00</del></p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+        <div class="masonry-item">
+            <img src="images/products/anime.jpg">
+            <div class="product-info">
+                <h4>JJK Itadori Yuji T Shirt,Geto Suguru Cosplay Costume T Shirts, Casual Fashion Round Neck Short Sleeve Shirt</h4>
+                <p class="price1">₹1,899.00</p>
+                <p>List Price:<del>₹2,699.00</del> </p>
+                <p class="rating">⭐ 4.6</p>
+                <!--<div class="product-actions">
+                    <button class="cart-btn"><img src="images/icons/shopping-bag.png" alt="Cart"></button>
+                    <button class="buy-now"><span>BUY</span></button>
+                    <button class="cart-btn"><img src="images/icons/heart.png" alt="Cart"></button>
+                </div>-->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="back-top"><div id=B1><button><span>Back to Top</span></button></div></div>
+
+<!-- ================= Footer ================= -->
+<footer>
+    <div class="footer">
+        <div class="footer-text" id="f1">
+            <div class="footer-col">
+                <h3 class="footer-h3">Get to Know Us</h3>
+                <p class="footer-p"><a href="#">About Fanfinity</a></p>
+                <p class="footer-p"><a href="#">Our Story</a></p>
+                <p class="footer-p"><a href="#">Project Overview</a></p>
+                <p class="footer-p"><a href="#">Careers (Demo)</a></p>
+                <p class="footer-p"><a href="#">Blog & Updates</a></p>
+            </div>
+        </div>
+         <div class="footer-text" id="f2">
+            <div class="footer-col">
+                <h3 class="footer-h3">Make Money With Us</h3>
+                <p class="footer-p"><a href="#">Sell on Fanfinity</a></p>
+                <p class="footer-p"><a href="#">Become a Partner</a></p>
+                <p class="footer-p"><a href="#">Affiliate Program (Demo)</a></p>
+                <p class="footer-p"><a href="#">Advertise Your Products</a></p>
+                
+            </div>
+        </div>
+        <div class="footer-text" id="f3">
+            <div class="footer-col">
+                <h3 class="footer-h3">Payment & Shopping</h3>
+                <p class="footer-p"><a href="#">Cash on Delivery</a></p>
+                <p class="footer-p"><a href="#">UPI Payments</a></p>
+                <p class="footer-p"><a href="#">Secure Checkout</a></p>
+                <p class="footer-p"><a href="#">Order Summary</a></p>
+                <p class="footer-p"><a href="#">GST Billing</a></p>
+            </div>
+        </div>
+        <div class="footer-text" id="f4">
+            <div class="footer-col">
+                <h3 class="footer-h3">Let Us Help You</h3>
+                <p class="footer-p"><a href="#">Your Account</a></p>
+                <p class="footer-p"><a href="#">Your Orders</a></p>
+                <p class="footer-p"><a href="#">Shipping Policy</a></p>
+                <p class="footer-p"><a href="#">Returns & Replacements</a></p>
+                <p class="footer-p"><a href="#">Help & Support</a></p>
+            </div>
+        </div>
+    </div>
+<hr class="footer-divider">
+<div class="language-region">
+    <h3 class="lang-title">Language & Region</h3>
+    <div class="lang-box">
+        <img src="images/icons/earth-globe.png" alt="rupee">English <span>›</span>
+    </div>
+    <div class="lang-box">
+        <img src="images/icons/rupee.png" alt="rupee">INR - Indian Rupee
+    </div>
+    <div class="lang-box">
+        <img src="images/icons/earth-globe.png" alt="rupee">India <span>›</span>
+    </div>
+</div>
+
+<hr class="footer-divider">
+
+<div class="footer-bottom">
+    <h2 class="brand-name"><img src="images/icons/shopping-cart-16.png" alt="logo">Fanfinity</h2>
+    <p>© 2026 Fanfinity</p>
+    <p>This website is developed as a college academic project.</p>
+    <p>All content and images are used for <b>Educational purposes</b> only.</p>
+</div>
+    
+</footer>
+
+
+  
+<!-- Category-Wheel -->
+ <div class="wheel-overlay" id="categoryWheel">
+ <div class="wheel-wrap" >
+
+  <!-- ── SVG ring + rotated text labels only ──
+    viewBox 640x640, centre (320,320)
+    Ring outer r=320, inner r=250, thickness=70px
+    Label radius r=285
+
+    Quadrant label positions (SVG angles 0=right 90=down):
+      TL 225° → (118.5, 118.5) rotate(-45°)
+      TR 315° → (521.5, 118.5) rotate(+45°)
+      BL 135° → (118.5, 521.5) rotate(+45°)
+      BR  45° → (521.5, 521.5) rotate(-45°)
+  -->
+  <svg class="ring-svg" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="ts" x="-40%" y="-40%" width="180%" height="180%">
+        <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,.8)"/>
+      </filter>
+    </defs>
+    <!-- orange ring -->
+    <circle cx="320" cy="320" r="320" fill="#e8650a"/>
+    <circle cx="320" cy="320" r="317" fill="none" stroke="#f5a040" stroke-width="3" opacity=".5"/>
+    <circle cx="320" cy="320" r="311" fill="none" stroke="#c94d00" stroke-width="1.5" opacity=".3"/>
+    <circle cx="320" cy="320" r="253" fill="none" stroke="#c94d00" stroke-width="4"/>
+    <!-- punch out inner disc -->
+    <circle cx="320" cy="320" r="250" fill="#f2f0eb"/>
+    <!-- labels -->
+    <text x="118.5" y="118.5"
+      text-anchor="middle" dominant-baseline="middle"
+      font-family="Bangers,cursive" font-size="30" letter-spacing="4" fill="#fff"
+      filter="url(#ts)" transform="rotate(-45,118.5,118.5)">Anime</text>
+    <text x="521.5" y="118.5"
+      text-anchor="middle" dominant-baseline="middle"
+      font-family="Bangers,cursive" font-size="30" letter-spacing="4" fill="#fff"
+      filter="url(#ts)" transform="rotate(45,521.5,118.5)">Movies</text>
+    <text x="118.5" y="521.5"
+      text-anchor="middle" dominant-baseline="middle"
+      font-family="Bangers,cursive" font-size="30" letter-spacing="4" fill="#fff"
+      filter="url(#ts)" transform="rotate(45,118.5,521.5)">Games</text>
+    <text x="521.5" y="521.5"
+      text-anchor="middle" dominant-baseline="middle"
+      font-family="Bangers,cursive" font-size="30" letter-spacing="4" fill="#fff"
+      filter="url(#ts)" transform="rotate(-45,521.5,521.5)">Music</text>
+  </svg>
+
+  <!-- ── inner disc ── -->
+  <div class="disc">
+
+    <!-- orange cross dividers -->
+    <div class="div-v"></div>
+    <div class="div-h"></div>
+
+    <!-- TL: ANIME -->
+    <div class="quad quad-tl">
+      <div class="img-box" onclick="goTo('anime')" title="Anime">
+        <a href="../category/anime.html">
+        <img src="images/products/movies/16.jpg">
+        </a>
+      </div>
+    </div>
+
+    <!-- TR: MOVIES/SERIES -->
+    <div class="quad quad-tr">
+      <div class="img-box" onclick="goTo('movies')" title="Movies/Series">
+        <a href="../category/Movies_Series.html">
+        <img src="images/products/movies/16.jpg">
+        </a>
+      </div>
+    </div>
+
+    <!-- BL: GAMES -->
+    <div class="quad quad-bl">
+      <div class="img-box" onclick="goTo('games')" title="Games">
+       <a href="../category/games.html">
+        <img src="images/products/movies/16.jpg">
+       </a>
+      </div>
+    </div>
+
+    <!-- BR: MUSIC/POP -->
+    <div class="quad quad-br">
+      <div class="img-box" onclick="goTo('music')" title="Music/Pop">
+        <a href="../category/Music.html">
+        <img src="images/products/movies/16.jpg">
+        </a>
+      </div>
+    </div>
+
+    <!-- centre circle: same orange as ring, yellow star -->
+    <div class="center-star">
+        <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M25 4 L28.5 20 L45 25 L28.5 30 L25 46 L21.5 30 L5 25 L21.5 20 Z"
+                fill="#FFD700" stroke="#b84000" stroke-width="1.5"/>
+          <circle cx="25" cy="25" r="4.5" fill="rgba(255,255,255,0.45)"/>
+        </svg>
+      </div>
+
+  </div><!-- /disc -->
+</div><!-- /wheel-wrap -->
+ </div><!-- /wheel-overlay -->
+
+<div id="toast"></div>
+
+   
+ <!-- LOGIN / SIGNUP MODAL -->
+    <div class="auth-container" id="authContainer">
+        <div class="auth-box">
+
+            <!-- LOGIN FORM -->
+            <div class="form login-form active">
+                <h2 id="login-h2">Login</h2>
+                <input type="email" id="loginEmail" placeholder="Email">
+                <small class="error"></small>
+                <input type="password" id="loginPassword" placeholder="Password">
+                <small class="error"></small>
+                <button id="loginSubmitBtn">Login</button>
+                <p>Don't have an account? 
+                    <br>
+                </p>
+                <button id="showSignup">Sign Up</button>
+            </div>
+
+            <!-- SIGNUP FORM -->
+            <div class="form signup-form">
+                <h2 id="signup-h2">Sign Up</h2>
+                <input type="text"  id="signupName" placeholder="Full Name">
+                <small class="error"></small>
+                <input type="email" id="signupEmail" placeholder="Email">
+                <small class="error"></small>
+                <input type="password"id="signupPassword" placeholder="Password">
+                <small class="error"></small>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password">
+                <small class="error"></small>
+                <button id="signupSubmitBtn">Create Account</button>
+                <p>Already have an account? 
+                    <span id="showLogin">Login</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+<!-- Product Modal -->
+<div id="productModal" class="product-modal">
+
+    <div class="modal-content">
+
+        <span class="close-btn-model">&times;</span>
+        <div class="image-wrapper">
+            <div class="modal-left">
+                <img id="modalImage" src="" alt="Product Image">
+                
+                <button id="wishlistBtn" class="wishlist-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="modal-right">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            
+            <div class="price-product">
+                <span id="modalPrice"></span><br>
+            </div>
+            <span id="modalListPrice"></span>
+
+            <div class="save-product">
+                 <span id="modalsave"></span>
+            </div>
+
+            <div class="Rating-product">
+                <span id="modalRating"></span>
+            </div>
+            
+            <div class="button-group">
+                <button class="buy-btn">Buy Now</button>
+                <button class="cart-btn-product">Add to Cart</button>
+            </div>
+
+            <div class="more-info">
+                <div id="modalmoreInfo">
+                    <h4>Capacity & Dimensions</h4>
+                    <ul class="product-specs">                        
+                        <li><strong>Capacity:</strong> 600 ml</li>
+                        <li><strong>Height:</strong> Approx. 18 cm</li>
+                        <li><strong>Diameter:</strong> Approx. 8.5 cm</li>
+                        <li><strong>Weight:</strong> ~450 g</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="more-info">
+                <div id="modalMaterialInfo">
+                    <h4>Material & Build</h4>
+                    <ul class="product-specs">
+                        <li><strong>Material:</strong> Food-grade Stainless Steel (Interior & Exterior)</li>
+                        <li><strong>Finish:</strong> Matte premium coating with high-resolution printed design</li>
+                        <li><strong>Lid Material:</strong> BPA-free plastic</li>
+                        <li><strong>Handle:</strong> Integrated sturdy grip handle</li>
+                    </ul>
+                </div>
+            </div>
+            
+
+            
+            
+        </div>
+
+    </div>s
+
+</div>
+
+
+<!--JS for login and signup-->
+    <!--<script>
+        // ================= MODAL OPEN/CLOSE =================
+
+        const openAuthBtn = document.getElementById("loginBtn");
+        const authContainer = document.getElementById("authContainer");
+        const showSignup = document.getElementById("showSignup");
+        const showLogin = document.getElementById("showLogin");
+        const loginForm = document.querySelector(".login-form");
+        const signupForm = document.querySelector(".signup-form");
+
+        openAuthBtn.onclick = () => {
+            authContainer.style.display = "flex";
+        }
+
+        showSignup.onclick = () => {
+            loginForm.classList.remove("active");
+            signupForm.classList.add("active");
+        }
+
+        showLogin.onclick = () => {
+            signupForm.classList.remove("active");
+            loginForm.classList.add("active");
+        }
+
+        window.onclick = function(e) {
+            if (e.target == authContainer) {
+                authContainer.style.display = "none";
+            }
+        }
+
+
+        // ================= VALIDATION SECTION =================
+
+        // LOGIN INPUTS
+        const loginEmail = document.getElementById("loginEmail");
+        const loginPassword = document.getElementById("loginPassword");
+        const loginSubmitBtn = document.getElementById("loginSubmitBtn");
+
+        // SIGNUP INPUTS
+        const signupName = document.getElementById("signupName");
+        const signupEmail = document.getElementById("signupEmail");
+        const signupPassword = document.getElementById("signupPassword");
+        const confirmPassword = document.getElementById("confirmPassword");
+        const signupSubmitBtn = document.getElementById("signupSubmitBtn");
+
+
+        // ===== REGEX =====
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const namePattern = /^[A-Za-z\s]{2,}$/;
+        const strongPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+
+
+    // =    ==== HELPER FUNCTIONS =====
+        function showError(input, message) {
+            const small = input.nextElementSibling;
+            small.innerText = message;
+            input.style.border = "2px solid red";
+        }
+
+        function showSuccess(input) {
+            const small = input.nextElementSibling;
+            small.innerText = "";
+            input.style.border = "2px solid green";
+        }
+
+
+        // ================= LOGIN VALIDATION =================
+
+        loginSubmitBtn.addEventListener("click", function(e){
+            e.preventDefault();
+
+            let valid = true;
+
+            if(!emailPattern.test(loginEmail.value.trim())){
+                showError(loginEmail, "Enter valid email");
+                valid = false;
+            } else {
+                showSuccess(loginEmail);
+            }
+
+        if(loginPassword.value.trim().length < 6){
+                showError(loginPassword, "Minimum 6 characters");
+                valid = false;
+            } else {
+                showSuccess(loginPassword);
+            }
+
+        if(valid){
+                alert("Login successful (frontend only)");
+            }
+        }); 
+
+
+        // ================= SIGNUP VALIDATION =================
+
+        signupSubmitBtn.addEventListener("click", function(e){
+            e.preventDefault();
+
+                let valid = true;
+
+            if(!namePattern.test(signupName.value.trim())){
+                showError(signupName, "Enter valid name");
+                valid = false;
+            } else {
+                showSuccess(signupName);
+            }
+
+            if(!emailPattern.test(signupEmail.value.trim())){
+                showError(signupEmail, "Enter valid email");
+                valid = false;
+            } else {
+                showSuccess(signupEmail);
+            }
+
+            if(!strongPassword.test(signupPassword.value)){
+                showError(signupPassword, "Min 8 chars, 1 uppercase, 1 number");
+                valid = false;
+            } else {
+                showSuccess(signupPassword);
+            }
+
+            if(confirmPassword.value !== signupPassword.value){
+                showError(confirmPassword, "Passwords do not match");
+                valid = false;
+            } else {
+                showSuccess(confirmPassword);
+        }   
+
+            if(valid){
+                alert("Signup successful (frontend only)");
+            }
+        });
+
+            //Back to top
+        document.getElementById("B1").addEventListener("click", function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }); 
+            //menu panel
+        function openMenu(){
+            document.getElementById("sideMenu").classList.add("active");
+            document.getElementById("menuOverlay").classList.add("active");
+        }
+
+        function closeMenu(){
+            document.getElementById("sideMenu").classList.remove("active");
+            document.getElementById("menuOverlay").classList.remove("active");
+        }
+
+
+
+        //Category Wheel
+        var NAMES = {
+            anime:  'Anime',
+            movies: 'Movies',
+            games:  'Games',
+            music:  'Music'
+        };
+        
+        function goTo(key) {
+
+    showToast('Opening ' + NAMES[key] + ' ...');
+
+    setTimeout(() => {
+
+        window.location.href = key + ".html";
+
+    }, 500);
+
+}
+        
+        var _t;
+        function showToast(msg) {
+            var el = document.getElementById('toast');
+            el.textContent = msg;
+            el.classList.add('show');
+            clearTimeout(_t);
+            _t = setTimeout(function() { el.classList.remove('show'); }, 2200);
+        }
+        const btn = document.getElementById("exploreBtn");
+        const wheel = document.getElementById("categoryWheel");
+  
+        //wheel popup
+        btn.addEventListener("click", () => {
+        wheel.style.display = "block";
+        });
+        wheel.addEventListener("click", (e)=>{
+   if(e.target.id === "categoryWheel"){
+      wheel.style.display="none";
+   }
+});
+
+    </script>-->
+    <script src="src/scripts/common.js" defer></script>
+    <script src="src/scripts/home.js" defer></script>
+    <script src="src/scripts/products-load.js" defer></script>
+    <script src="src/scripts/home products/homepage-products.js" defer></script>
+    <script src="src/scripts/pages/home-product-model.js" defer></script>
+    
+    
+</body>
+</html>

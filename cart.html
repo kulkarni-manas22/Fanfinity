@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fanfinity | Cart</title>
+<link rel="stylesheet" href="css/cart.css">
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="navbar">
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="images/Logos/logo_image.png" alt="Fanfinity Logo" id="img1">
+    </div>
+
+    <!--login button-->
+    <!--<nav>
+        <button class="btn" id="loginBtn">Login</button>
+    </nav>-->
+
+    
+
+    <!--location dropdown-->
+    <div class="nav-center">
+         <div class="icon-circle" id="home1">
+           <a href="home.html" >
+           <img src="images/icons/home-agreement.png" alt="Menu" >
+           </a>
+       </div>
+        <!--<div class="location">
+            <select>
+                <option>Select Location📍</option>
+                <option>New York</option>
+                <option>Los Angeles</option>
+                <option>Chicago</option>
+                <option>Houston</option>
+                <option>India</option>
+            </select>
+        </div>-->
+
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="search" placeholder="Search">
+            <img src="images/icons/search.png" alt="search">
+            <!--<span class="search-icon">🔍</span>-->
+        </div>
+    
+        <!-- Right Icons -->
+        <div class="nav-icons">
+       
+            <a href="wishlist.html">
+                <div class="icon-circle" id="heart1">
+                    <img src="images/icons/heart.png" alt="Cart"><br>
+                </div>
+            </a>
+            <div class="icon-circle" id="cart1">
+                <img src="images/icons/shopping-bag.png" alt="Cart"><br>
+            </div>
+            <div class="icon-circle" onclick="openMenu()">
+                <img src="images/icons/app-removebg-preview.png" alt="Menu" >
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ================= Side Menu ================= -->
+<!-- Side Menu -->
+<div class="side-menu" id="sideMenu">
+    <div class="close">
+        <span class="close-btn" onclick="closeMenu()">×</span>
+    </div>
+    <div class="menu-header">
+        <!--<h2>Menu</h2>-->
+        <img src="images/Logos/logo_image.png" alt="fanfinity Logo" class="logo">
+    </div>
+    <div class="links-grp">
+        <a href="profile.html">
+            <div class="list-links">
+                <img src="images/icons/user-16.png" alt="User" ><p>Profile </p><span>›</span>
+            </div>
+        </a>
+       <a href="order.html">
+                <div class="list-links">
+                    <img src="images/icons/purchase-order-16.png" alt="Orders" ><p>Orders</p> <span>›</span>
+                </div>
+            </a>
+        <div class="list-links">
+            <img src="images/icons/call.png" alt="ContactUs" ><p>Contact Us</p> <span>›</span>
+        </div>
+        
+        
+        <button class="logout-btn" id="logOutBtn">Log-out</button>
+        
+    </div>
+    
+
+</div>
+
+
+<div class="checkout-container">
+
+    <div class="checkout-title">Payment & Checkout</div>
+
+    <div class="checkout-grid">
+
+        <!-- LEFT SIDE -->
+        <div class="left-section">
+
+            <!-- Products in Cart -->
+            <div class="card products-card">
+                <div class="card-title">Products in your cart</div>
+
+                <!-- Product 1 -->
+                <div class="product-item">
+                    <img src="images/products/Anime/12.jpg" class="product-img">
+                    <div class="product-details">
+                        <p class="product-desc">
+                            WebGrip Hero Gaming Controller Figurine | Spider-Inspired Desk Décor | Premium Resin Collectible
+                        </p>
+                        <p class="price">₹1,299.00</p>
+                        <p class="list-price">List Price: <span>₹1,799.00</span></p>
+                        <p class="save">You Save: ₹500 (28%)</p>
+
+                        <div class="product-bottom">
+                            <div class="delete-btn">🗑️</div>
+                            <div class="qty-box">
+                                <button>-</button>
+                                <span>1</span>
+                                <button>+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-item">
+                    <img src="images/products/Anime/10.jpg" class="product-img">
+                    <div class="product-details">
+                        <p class="product-desc">
+                            Anime Itachi Uchiha Action Figure with Crows | Premium Collectible Statue | Naruto Shippuden Merchandise
+                        </p>
+                        <p class="price">₹1,899.00</p>
+                        <p class="list-price">List Price: <span>₹2,699.00</span></p>
+                        <p class="save">You Save: ₹800 (30%)</p>
+
+                        <div class="product-bottom">
+                            <div class="delete-btn">🗑️</div>
+                            <div class="qty-box">
+                                <button>-</button>
+                                <span>1</span>
+                                <button>+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Payment Method -->
+            <div class="card payment-card">
+                <h3>Choose payment method</h3>
+
+                <div class="payment-option">
+                    <input type="radio" name="payment">
+                    <span>UPI</span>
+                </div>
+
+                <div class="upi-logos">
+                    <div class="gpay"><img src="images/icons/google-pay-48.png" class="pay_icon"></div>
+                    <div class="phonepe"><img src="images/icons/razorpay-icon_48.png" class="razorpay-icon" id="payment-logo"></div>
+                    <div class="paytm"><img src="images/icons/paytm-icon-48.png" class="paytm-icon" ></div>
+                </div>
+
+                <div class="payment-option">
+                    <input type="radio" name="payment">
+                    <span>Cash on delivery</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="right-section">
+
+            <!-- Order Summary -->
+            <div class="card summary-card">
+                <div class="card-title">Order Summary</div>
+
+                <div class="summary-row">
+                    <span>Spider Hold</span>
+                    <span>₹1,999.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Action Figure</span>
+                    <span>₹1,899.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>GST(18%)</span>
+                    <span>₹575.00</span>
+                </div>
+
+                <hr>
+
+                <div class="summary-total">
+                    <span>TOTAL</span>
+                    <span>₹4,473</span>
+                </div>
+            </div>
+
+            <!-- Billing Address -->
+            <div class="card billing-card">
+                <div class="card-title">Billing Address</div>
+
+                <div class="input-row" ></div>
+                <div class="input-row"></div>
+                <div class="input-row"></div>
+                <div class="input-row ">
+                </div>
+                <button class="location-row1">Edit Address</button>
+            </div>
+
+            <!-- Pay Button -->
+            <div class="card pay-card">
+                <button class="pay-btn">Pay ₹4,473 Securely</button>
+                <div class="secure-text">
+                    🔒 100% secure payments
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="src/scripts/common.js" defer></script>
+</body>
+</html>

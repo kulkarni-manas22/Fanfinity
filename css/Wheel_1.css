@@ -1,0 +1,207 @@
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #1c1c1c;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── outer wrap ── */
+.wheel-wrap {
+  position: relative;
+  width: 640px;
+  height: 640px;
+  z-index: 2;
+}
+
+/* ── orange ring SVG sits on top for labels, no pointer events ── */
+.ring-svg {
+  position: absolute;
+  inset: 0;
+  width: 640px;
+  height: 640px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* ── inner white disc ── */
+.disc {
+  position: absolute;
+  top: 70px;
+  left: 70px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: #f2f0eb;
+  /* clip everything inside to the circle shape */
+  overflow: hidden;
+  box-shadow: 0 8px 48px rgba(0,0,0,.55);
+}
+
+/* ── orange cross dividers (same #e8650a as ring) ── */
+.div-v {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 8px;
+  height: 100%;
+  background: #e8650a;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.div-h {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: #e8650a;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+/* ── four quadrant sections ── */
+/*
+  Each section is 50%x50% of the disc (250x250px).
+  We use position:absolute so they tile the disc.
+  overflow:hidden on .disc already clips them to the circle.
+*/
+.quad {
+  position: absolute;
+  width: 65%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.quad-tl { top: 0;    left: 0;   }
+.quad-tr { top: 0;    right: 0;  }
+.quad-bl { bottom: 0; left: 0;   }
+.quad-br { bottom: 0; right: 0;  }
+
+/*
+  Image container — 100x100px square, centred in each quadrant.
+  Nudged slightly away from centre so it clears the 8px divider
+  and sits comfortably inside the circular boundary.
+
+  Max safe distance from quadrant centre (250/2 = 125px) to
+  circle edge along diagonal = 250*cos(45°) ≈ 177px from disc centre,
+  so 177 - 125 = 52px margin to the curved edge.
+  A 100px box centred in the quadrant (50px half-width) leaves
+  ~2px margin to the curve — safe.  We nudge 8px from centre
+  so the box clears the divider strip.
+*/
+.img-box {
+  width: 110px;
+  height: 110px;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  flex-shrink: 0;
+  /* push the box away from the centre cross into the quadrant */
+  position: relative;
+  box-shadow:
+    0 6px 20px rgba(0,0,0,.45),
+    0 2px  6px rgba(0,0,0,.25),
+    0 0    0 2.5px rgba(255,255,255,.55);
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+  z-index: 2;
+}
+.img-box:hover {
+  box-shadow:
+    0 10px 28px rgba(0,0,0,.6),
+    0  3px 10px rgba(0,0,0,.35),
+    0  0   0  3px rgba(255,210,50,.85);
+  filter: brightness(1.1);
+}
+.img-box:active {
+  transform: scale(0.95) !important;
+  filter: brightness(0.88);
+}
+
+/* nudge each box toward its outer corner to clear the divider */
+.quad-tl .img-box { transform: translate(-18px, -18px); }
+.quad-tr .img-box { transform: translate( 18px, -18px); }
+.quad-bl .img-box { transform: translate(-18px,  18px); }
+.quad-br .img-box { transform: translate( 18px,  18px); }
+
+.quad-tl .img-box:hover { transform: translate(-18px, -18px) scale(1.07); }
+.quad-tr .img-box:hover { transform: translate( 18px, -18px) scale(1.07); }
+.quad-bl .img-box:hover { transform: translate(-18px,  18px) scale(1.07); }
+.quad-br .img-box:hover { transform: translate( 18px,  18px) scale(1.07); }
+
+/* image inside the box fills it completely */
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+/* placeholder shown when no image is set */
+.img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.45);
+  border: 2px dashed rgba(232,101,10,0.5);
+  border-radius: 14px;
+  color: rgba(100,50,0,0.6);
+  font-family: 'Bangers', cursive;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 8px;
+  pointer-events: none;
+  user-select: none;
+}
+.img-placeholder svg { opacity: 0.4; }
+
+/* ── centre circle ── */
+.center-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #e8650a;
+  border: 5px solid #c94d00;
+  box-shadow:
+    0 0 0 2.5px #e8650a,
+    0 4px 18px rgba(0,0,0,.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── toast ── */
+#toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: #e8650a;
+  color: #fff;
+  padding: 11px 28px;
+  border-radius: 40px;
+  font-family: 'Bangers', cursive;
+  font-size: 18px;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.45);
+  transition: transform .35s cubic-bezier(.34,1.56,.64,1);
+  pointer-events: none;
+  z-index: 99;
+}
+#toast.show { transform: translateX(-50%) translateY(0); }

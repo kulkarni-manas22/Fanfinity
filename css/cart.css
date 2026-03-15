@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #dcdcdc;
+}
+
+.checkout-container {
+    width: 1100px;
+    margin: 50px auto;
+    background: #FEF0C9;
+    padding: 40px;
+    border-radius: 25px;
+    position: relative;
+}
+
+.checkout-title {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f26c00;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+
+
+.card {
+    background: #f4f4f4;
+    border-radius: 20px;
+    padding: 25px;
+    border: 2px solid #f26c00;
+    margin-bottom:20px;
+}
+
+.card-title {
+    background: #f26c00;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 17px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+.product-item {
+    display: flex;
+    gap: 15px;
+    background: #f1e2c0;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 10px rgb(0,0,0,0.5);
+}
+
+.product-img {
+    width: 160px;
+    border-radius: 10px;
+}
+
+.product-desc {
+    font-size: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size:15px;
+}
+
+.price {
+    font-weight: 600;
+}
+
+.list-price span {
+    text-decoration: line-through;
+    color: #666;
+}
+
+.save {
+    color: green;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-btn {
+    background: #ffe2cc;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid #f26c00;
+}
+
+.qty-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffd6a6;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border:2px solid #f26c00;
+    height: 40px;
+}
+
+.qty-box button {
+    border: none;
+    background: none;
+    font-weight: bold;
+    cursor: pointer;
+    size: 10px;;
+}
+
+.payment-card h3 {
+    margin-bottom: 20px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f1e2c0;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.upi-logos {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    cursor:pointer;
+}
+
+#payment-logo{
+    width:65px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.billing-card .input-row {
+    height: 40px;
+    background: #f1e2c0;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+/*.location-row1 {
+    }*/
+    
+    .location-row1  {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 10px;
+    align-items: center;
+    background: #f26c00;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size:16px;
+    font-weight: 20px;;
+}
+
+.location-row1:hover{
+    transform:scale(0.9);
+}
+
+.pay-card {
+    text-align: center;
+}
+
+.pay-btn {
+    background: #ff7a1a;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 8px 5px rgb(0, 0, 0, 0.5);
+}
+
+.pay-btn:hover{
+    transform:scale(1.1);
+}
+
+.secure-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #444;
+}
+
+
+
+
+

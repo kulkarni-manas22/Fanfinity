@@ -1,0 +1,268 @@
+/* Shared product modal styles */
+
+.product-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(6px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.product-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: #fcf8f8;
+    width: 900px;
+    max-width: 95%;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    animation: fadeIn 0.3s ease;
+    height: auto;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-left img {
+    width: 300px;
+    border-radius: 20px;
+}
+
+.modal-right {
+    flex: 1;
+}
+
+.buy-btn {
+    background: #a855f7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    display: inline;
+    font-weight: bold;
+}
+
+.cart-btn-product {
+    background: #e9d5ff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    display: inline;
+}
+
+.product-modal .close-btn {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.price-product{
+    justify-self: center;
+    margin-top:20px;
+}
+
+.Rating-product , .save-product{
+    justify-self: center;
+    margin-top:20px;
+}
+
+.more-info {
+    margin-top: 25px;
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    margin-left:10px;
+}
+
+.product-specs {
+    list-style: disc;
+    padding-left: 20px;
+    max-width: 250px;   /* controls width so it looks neat */
+}
+
+.product-specs {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+    color: #444;
+    font-size: 14px;
+}
+
+.product-specs li {
+    margin-bottom: 6px;
+}
+
+
+
+.button-group{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#modalListPrice{
+    display:flex;
+    justify-content: center;
+    margin-top:10px;
+    text-decoration: line-through;
+    color: #888;
+}
+
+#modalsave {
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+.close-btn-model{
+     position: absolute;
+    right: 25px;
+    top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ============== specific category wise styling =======================*/
+
+.home-page .modal-content{
+    background:#fcf8f8;
+}
+
+.home-page .buy-btn{
+    background:#ff751f;
+}
+
+.home-page .cart-btn-product{
+    background:#f4d2be;
+}
+
+.anime-page .modal-content{
+    background:#fcf8f8;
+}
+
+.anime-page .buy-btn{
+    background:#E93E39;
+    font-weight: bold;
+}
+
+.anime-page .cart-btn-product{
+    background:#f8cfdb;
+}
+
+.movies-series-page .modal-content{
+    background:#fcf8f8;
+}
+
+.movies-series-page .buy-btn{
+    background:#3E3E3E;
+    font-weight: bold;
+}
+
+.movies-series-page .cart-btn-product{
+    background:#b4b3b3;
+}
+
+.pop-page .modal-content{
+    background:#fcf8f8;
+}
+
+.pop-page .buy-btn{
+    background:#00B5BB;
+    font-weight: bold;
+}
+
+.pop-page .cart-btn-product{
+    background:#CAF5F7;
+}
+
+
+.movies-page .modal-content{
+    background:#fcf8f8;
+}
+
+.movies-page .buy-btn{
+    background:#3E3E3E;
+    font-weight: bold;
+}
+
+.movies-page .cart-btn-product{
+    background:#b4b3b3;
+}
+
+.series-page .modal-content{
+    background:#fcf8f8;
+}
+
+.series-page .buy-btn{
+    background:#3E3E3E;
+    font-weight: bold;
+}
+
+.series-page .cart-btn-product{
+    background:#b4b3b3;
+}
+
+.games-page .modal-content{
+    background:#fcf8f8;
+}
+
+.games-page .buy-btn{
+    background:#76C002;
+    color:black;
+    font-weight: bold;
+}
+
+.games-page .cart-btn-product{
+    background:#c9ec9d;
+}
+
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.wishlist-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: 0.2s ease;
+}
+
+.wishlist-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Active state */
+.wishlist-btn.active {
+    color: red;
+}
+
+
+
