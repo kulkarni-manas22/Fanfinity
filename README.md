@@ -1,6 +1,6 @@
 # FanFinity
 
-FanFinity is a full-stack e-commerce web application designed for buying and selling fan merchandise. The platform provides a seamless shopping experience for users while offering powerful management tools for administrators.
+FanFinity is a full-stack fan merchandise e-commerce platform developed using Python Flask. The platform allows users to create accounts, browse products, manage shopping carts, place orders, track deliveries, and request returns. Administrators can manage products, inventory, orders, users, and return requests through a dedicated admin interface. The project focuses on providing a complete online shopping experience while implementing essential e-commerce functionalities and security practices.
 
 ---
 
