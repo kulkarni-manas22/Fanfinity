@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fanfinity | Profile</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+
+    <!-- ================= HEADER ================= -->
+<header class="navbar">
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="images/Logos/logo_image.png" alt="Fanfinity Logo" id="img1">
+    </div>
+
+    <!--login button
+    <nav>
+        <button class="btn" id="loginBtn">Login</button>
+    </nav>-->
+
+    
+    
+    <!--location dropdown-->
+    <div class="nav-center">
+        <div class="icon-circle" id="home1">
+           <a href="home.html" >
+           <img src="images/icons/home-agreement.png" alt="Menu" >
+           </a>
+       </div>
+        <!--<div class="location">
+            <select>
+                <option>Select Location📍</option>
+                <option>New York</option>
+                <option>Los Angeles</option>
+                <option>Chicago</option>
+                <option>Houston</option>
+                <option>India</option>
+            </select>
+        </div>-->
+
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="search" placeholder="Search">
+            <img src="images/icons/search.png" alt="search">
+            <!--<span class="search-icon">🔍</span>-->
+        </div>
+    
+        <!-- Right Icons -->
+        <div class="nav-icons">
+            <a href="wishlist.html">
+                <div class="icon-circle" id="heart1">
+                    <img src="images/icons/heart.png" alt="Cart"><br>
+                </div>
+            </a>
+            <div class="icon-circle" id="cart1">
+                <a href="cart.html">
+                <img src="images/icons/shopping-bag.png" alt="Cart"><br>
+                </a>
+            </div>
+            <div class="icon-circle" onclick="openMenu()">
+                <img src="images/icons/app-removebg-preview.png" alt="Menu" >
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ================= Side Menu ================= -->
+<!-- Side Menu -->
+<div class="side-menu" id="sideMenu">
+    <div class="close">
+        <span class="close-btn" onclick="closeMenu()">×</span>
+    </div>
+    <div class="menu-header">
+        <!--<h2>Menu</h2>-->
+        <img src="images/Logos/logo_image.png" alt="fanfinity Logo" class="logo">
+    </div>
+    <div class="links-grp">
+        <a href="profile.html">
+            <div class="list-links">
+                <img src="images/icons/user-16.png" alt="User" ><p>Profile </p><span>›</span>
+            </div>
+        </a>
+        <a href="order.html">
+            <div class="list-links">
+                <img src="images/icons/purchase-order-16.png" alt="Orders" ><p>Orders</p> <span>›</span>
+            </div>
+        </a>
+        <a href="fanfinity-info.html">
+            <div class="list-links">
+                <img src="images/icons/call.png" alt="ContactUs" ><p>Contact Us</p> <span>›</span>
+            </div>
+        </a>
+        <button class="logout-btn" id="logOutBtn">Log-out</button>
+    </div>
+</div>
+
+
+
+<!-- ================= Profile containers ================= -->
+<div class="profile-container">
+    <!-- Top Profile Card -->
+    <div class="profile-header">
+        <div class="profile-left">
+            <div class="avatar"><img src="images/icons/user-24.png" alt="profile"></div>
+            <div>
+                <h2 id="profileUsername">Loading....</h2>
+                <p id="profileLocation">📍 Add your address</p>
+            </div>
+        </div>
+        <button class="edit-btn" id="editBtn"  onclick="openProfileModal('profile')">Edit Profile</button>
+    </div>
+
+    <!-- Dashboard Grid -->
+    <div class="dashboard-grid">
+
+        <!-- Address -->
+        <div class="card">
+            <h3>Address Details</h3>
+            <div class="card-content address-card-content">
+                <div id="addressDetailsBox" class="address-details-box">
+                    <p id="addressLine">No address added yet.</p>
+                    <p id="cityStateLine"></p>
+                    <p id="countryPincodeLine"></p>
+                    <p id="phoneLine"></p>
+                </div>
+            </div>
+            <button class="card-btn" onclick="openProfileModal('address')">Edit Address</button>
+        </div>
+
+        <!-- Orders -->
+        <div class="card">
+            <h3><img src="images/icons/purchase-order-16.png" alt="orders">My Orders</h3>
+            <div class="card-content">
+                <div class="product-item">
+                     <div id="profileOrdersPreview"></div>
+                </div>
+                
+            </div>
+            <a href="order.html">
+            <button class="card-btn">View more</button>
+            </a>
+        </div>
+
+        <!-- Wishlist
+        <div class="card">
+            <h3> <img src="images/icons/heart.png" alt="Wishlist">My Wishlist</h3>
+            <div class="card-content">
+                <div class="items">
+
+                    <div class="wishlist-card">
+                        <img src="images/products/anime.jpg" alt="">
+                    </div>
+
+                    <div class="wishlist-card">
+                        <img src="images/products/anime.jpg" alt="">
+                    </div>
+
+                </div>
+            </div>
+            <a href="wishlist.html">
+                <button class="card-btn">View more</button>
+            </a>
+        </div> -->
+        <!-- Wishlist -->
+        <div class="card">
+            <h3><img src="images/icons/heart.png" alt="Wishlist">My Wishlist</h3>
+            <div class="card-content wishlist-preview-content">
+                <div id="profileWishlistPreview" class="items"></div>
+            </div>
+            <a href="wishlist.html">
+                <button class="card-btn">View more</button>
+            </a>
+        </div>
+
+        <!-- Cart
+        <div class="card">
+            <h3><img src="images/icons/shopping-cart-16.png" alt="Cart">In my cart</h3>
+            <div class="card-content">
+                <div class="product-item">
+
+                    <div class="product-image">
+                        <img src="images/products/itachi.jpg" alt="Itachi Figure">
+                    </div>
+
+                    <div class="product-details">
+                        <h3>
+                            Anime Itachi Uchiha Action Figure with Crows |
+                            Premium Collectible Statue |
+                            Naruto Shippuden Merchandise
+                        </h3>
+
+                        <div class="price">₹4,499.00</div>
+
+                        <div class="list-price">
+                            List Price: <span><del>₹6,299.00</del></span>
+                        </div>
+
+                        <div class="save">
+                            💸 You Save: ₹1,800 (29%)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="cart.html">
+            <button class="card-btn">View more</button>
+            </a>
+            
+        </div> -->
+        <!-- Cart -->
+        <div class="card">
+            <h3><img src="images/icons/shopping-cart-16.png" alt="Cart">In my cart</h3>
+            <div class="card-content cart-preview-content">
+                <div id="profileCartPreview"></div>
+            </div>
+            <a href="cart.html">
+                <button class="card-btn">View more</button>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="back-top"><div id=B1><button><span>Back to Top</span></button></div></div>
+<!-- ================= Footer ================= -->
+<footer>
+    <div class="footer">
+        <div class="footer-text" id="f1">
+            <div class="footer-col">
+                <h3 class="footer-h3">Get to Know Us</h3>
+                <p class="footer-p"><a href="#">About Fanfinity</a></p>
+                <p class="footer-p"><a href="#">Our Story</a></p>
+                <p class="footer-p"><a href="#">Project Overview</a></p>
+                <p class="footer-p"><a href="#">Careers (Demo)</a></p>
+                <p class="footer-p"><a href="#">Blog & Updates</a></p>
+            </div>
+        </div>
+         <div class="footer-text" id="f2">
+            <div class="footer-col">
+                <h3 class="footer-h3">Make Money With Us</h3>
+                <p class="footer-p"><a href="#">Sell on Fanfinity</a></p>
+                <p class="footer-p"><a href="#">Become a Partner</a></p>
+                <p class="footer-p"><a href="#">Affiliate Program (Demo)</a></p>
+                <p class="footer-p"><a href="#">Advertise Your Products</a></p>
+                
+            </div>
+        </div>
+        <div class="footer-text" id="f3">
+            <div class="footer-col">
+                <h3 class="footer-h3">Payment & Shopping</h3>
+                <p class="footer-p"><a href="#">Cash on Delivery</a></p>
+                <p class="footer-p"><a href="#">UPI Payments</a></p>
+                <p class="footer-p"><a href="#">Secure Checkout</a></p>
+                <p class="footer-p"><a href="#">Order Summary</a></p>
+                <p class="footer-p"><a href="#">GST Billing</a></p>
+            </div>
+        </div>
+        <div class="footer-text" id="f4">
+            <div class="footer-col">
+                <h3 class="footer-h3">Let Us Help You</h3>
+                <p class="footer-p"><a href="#">Your Account</a></p>
+                <p class="footer-p"><a href="#">Your Orders</a></p>
+                <p class="footer-p"><a href="#">Shipping Policy</a></p>
+                <p class="footer-p"><a href="#">Returns & Replacements</a></p>
+                <p class="footer-p"><a href="#">Help & Support</a></p>
+            </div>
+        </div>
+    </div>
+<hr class="footer-divider">
+<div class="language-region">
+    <h3 class="lang-title">Language & Region</h3>
+    <div class="lang-box">
+        <img src="images/icons/earth-globe.png" alt="rupee">English <span>›</span>
+    </div>
+    <div class="lang-box">
+        <img src="images/icons/rupee.png" alt="rupee">INR - Indian Rupee
+    </div>
+    <div class="lang-box">
+        <img src="images/icons/earth-globe.png" alt="rupee">India <span>›</span>
+    </div>
+</div>
+
+<hr class="footer-divider">
+
+<div class="footer-bottom">
+    <h2 class="brand-name"><img src="images/icons/shopping-cart-16.png" alt="logo">Fanfinity</h2>
+    <p>© 2026 Fanfinity</p>
+    <p>This website is developed as a college academic project.</p>
+    <p>All content and images are used for <b>Educational purposes</b> only.</p>
+</div>
+    
+</footer>
+
+<!-- old profile edit MODAL
+<div id="profileModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close-btn1" onclick="closeProfileModal()"><big>&times;</big></span>
+
+        <div class="profile-form">
+
+            <h2>Edit Profile</h2>
+
+            <input type="text" placeholder="Enter Username*" required>
+
+            <h3>Address Details</h3>
+
+            <input type="text" placeholder="Street/Locality/Society name*" required>
+            <input type="text" placeholder="City, State*" required>
+            <input type="text" placeholder="Country - Pincode*" required>
+
+            <h3>Contact</h3>
+
+            <input type="text" placeholder="Enter Phone no*" required>
+
+            <button class="submit-btn">Submit</button>
+
+        </div>
+
+    </div>
+
+</div> -->
+
+<!-- profile edit MODAL -->
+<div id="profileModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn1" onclick="closeProfileModal()"><big>&times;</big></span>
+
+        <!-- <form id="profileForm" class="profile-form">
+            <h2>Edit Profile</h2>
+            username section-->
+            <!-- <div id="accountSection">
+    <input type="text" id="usernameInput" placeholder="Enter Username*" maxlength="50" required>
+    <input type="email" id="emailInput" placeholder="Enter Email">
+
+    <div class="otp-row">
+        <button type="button" id="sendOtpBtn">Send OTP</button>
+        <span id="otpTimerText"></span>
+    </div>
+
+    <input type="text" id="otpInput" placeholder="Enter OTP" maxlength="6" style="display:none;">
+    <button type="button" id="verifyOtpBtn" style="display:none;">Verify OTP</button>
+
+    <div id="passwordFields" style="display:none;">
+        <input type="password" id="newPasswordInput" placeholder="New Password">
+        <input type="password" id="confirmPasswordInput" placeholder="Confirm Password">
+    </div>
+</div> -->
+            <!-- <div id="usernameSection">
+                <input
+                    type="text"
+                    id="usernameInput"
+                    name="username"
+                    placeholder="Enter Username*"
+                    maxlength="50"
+                    required
+                >
+            </div> -->
+            <!-- <input
+                type="text"
+                id="usernameInput"
+                name="username"
+                placeholder="Enter Username*"
+                maxlength="50"
+                required
+            > -->
+
+            <!-- <h3>Address Details</h3> -->
+            <!-- ADDRESS SECTION -->
+            <!-- <div id="addressSection">
+                <input type="text" id="addressInput" placeholder="Street / Locality / Society name*" required>
+                <input type="text" id="cityInput" placeholder="City*" required>
+                <input type="text" id="stateInput" placeholder="State*" required>
+                <input type="text" id="countryInput" placeholder="Country*" required>
+                <input type="text" id="pincodeInput" placeholder="Pincode*" required>
+            </div> -->
+            <!-- <input
+                type="text"
+                id="addressInput"
+                name="address"
+                placeholder="Street / Locality / Society name*"
+                required
+            >
+
+            <input
+                type="text"
+                id="cityInput"
+                name="city"
+                placeholder="City*"
+                required
+            >
+
+            <input
+                type="text"
+                id="stateInput"
+                name="state"
+                placeholder="State*"
+                required
+            >
+
+            <input
+                type="text"
+                id="countryInput"
+                name="country"
+                placeholder="Country*"
+                value="India"
+                required
+            >
+
+            <input
+                type="text"
+                id="pincodeInput"
+                name="pincode"
+                placeholder="Pincode*"
+                maxlength="10"
+                required
+            > 
+
+            <h3 id="contactHeading">Contact</h3>
+             CONTACT SECTION 
+            <div id="contactSection">
+                <input type="text" id="phoneInput" placeholder="Enter Phone No*" required>
+            </div>
+             <input
+                type="text"
+                id="phoneInput"
+                name="phone_no"
+                placeholder="Enter Phone No*"
+                maxlength="15"
+                required
+            > 
+
+            <button type="submit" class="submit-btn" id="profileSubmitBtn">Save Changes</button>
+        </form> -->
+        <form id="profileForm" class="profile-form">
+    <h2 id="profileModalTitle">Edit Profile</h2>
+
+    <!-- PROFILE MODE -->
+    <div id="accountSection">
+        <div class="form-group">
+            <label for="usernameInput">Username</label>
+            <input
+                type="text"
+                id="usernameInput"
+                name="username"
+                placeholder="Enter username"
+                maxlength="50"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="emailInput">Email</label>
+            <input
+                type="email"
+                id="emailInput"
+                name="email"
+                placeholder="Enter email"
+            >
+        </div>
+
+        <div class="security-box">
+            <label class="section-label">Password Security</label>
+
+            <div class="otp-row">
+                <button type="button" id="sendOtpBtn" class="otp-btn">Send OTP</button>
+                <span id="otpTimerText" class="otp-timer"></span>
+            </div>
+
+            <div class="form-group otp-group" id="otpGroup" style="display:none;">
+                <label for="otpInput">OTP</label>
+                <input
+                    type="text"
+                    id="otpInput"
+                    placeholder="Enter OTP"
+                    maxlength="6"
+                >
+            </div>
+
+            <button type="button" id="verifyOtpBtn" class="otp-btn verify-btn" style="display:none;">Verify OTP</button>
+
+            <div id="passwordFields" style="display:none;">
+                <div class="form-group">
+                    <label for="newPasswordInput">New Password</label>
+                    <input
+                        type="password"
+                        id="newPasswordInput"
+                        placeholder="Enter new password"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPasswordInput">Confirm Password</label>
+                    <input
+                        type="password"
+                        id="confirmPasswordInput"
+                        placeholder="Confirm new password"
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADDRESS MODE -->
+    <div id="addressSection" style="display:none;">
+        <div class="form-group">
+            <label for="addressInput">Street / Locality / Society</label>
+            <input
+                type="text"
+                id="addressInput"
+                name="address"
+                placeholder="Street / Locality / Society name"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="cityInput">City</label>
+            <input
+                type="text"
+                id="cityInput"
+                name="city"
+                placeholder="Enter city"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="stateInput">State</label>
+            <input
+                type="text"
+                id="stateInput"
+                name="state"
+                placeholder="Enter state"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="countryInput">Country</label>
+            <input
+                type="text"
+                id="countryInput"
+                name="country"
+                placeholder="Enter country"
+                value="India"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="pincodeInput">Pincode</label>
+            <input
+                type="text"
+                id="pincodeInput"
+                name="pincode"
+                placeholder="Enter pincode"
+                maxlength="10"
+                required
+            >
+        </div>
+    </div>
+
+    <button type="submit" class="submit-btn" id="profileSubmitBtn">Save Changes</button>
+</form>
+    </div>
+</div>
+
+<!--<script>
+     //Back to top
+        document.getElementById("B1").addEventListener("click", function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }); 
+            
+        function openMenu(){
+            document.getElementById("sideMenu").classList.add("active");
+            document.getElementById("menuOverlay").classList.add("active");
+        }
+
+        function closeMenu(){
+            document.getElementById("sideMenu").classList.remove("active");
+            document.getElementById("menuOverlay").classList.remove("active");
+        }
+
+        //profile edit form
+        function openProfileModal() {
+            document.getElementById("profileModal").style.display = "block";
+        }
+
+        function closeProfileModal() {
+            document.getElementById("profileModal").style.display = "none";
+        }
+
+        // Close when clicking outside
+        window.onclick = function(event) {
+            let modal = document.getElementById("profileModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }   
+        }
+</script>-->
+<script src="src/scripts/common.js" defer></script>
+<script src="src/scripts/pages/profile.js" defer></script>
+
+</body>
+</html>

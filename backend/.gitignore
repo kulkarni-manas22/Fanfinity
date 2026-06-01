@@ -1,0 +1,10 @@
+.env
+__pycache__/
+Backup/
+venv/
+.idea/
+.vscode/
+*.log
+admin_important.txt
+images/not_in_use/*
+seed_data.py

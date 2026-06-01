@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Fanfinity | Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/Admin.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/user-info.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar-admin">
+     <div class="logo">
+        <img src="../images/Logos/logo_image.png" alt="Fanfinity Logo" id="img1">
+    </div>
+
+    <div class="nav-center">
+        <div class="nav-btn">Dashboard</div>
+        <a href="user-info.html">
+            <div class="nav-btn">Users</div>
+        </a>
+        <a href="product-info.html">
+            <div class="nav-btn">Products</div>
+        </a>
+        <div class="nav-btn" id="logoutBtn">LogOut</div>
+    </div>
+
+    <div class="nav-right">
+        👤 Admin
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- STATS -->
+    <!-- STATS -->
+<div class="stats">
+
+    <div class="stat-card">
+        <div class="stat-title">Total Users</div>
+        <div class="stat-number" id="totalUsers">0</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-title">Total Products</div>
+        <div class="stat-number" id="totalPosts">0</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-title">Delivered</div>
+        <div class="stat-number" id="totalApprovals">0</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-title">Returns</div>
+        <div class="stat-number" id="totalReturns">0</div>
+    </div>
+
+</div>
+
+
+    <!-- CATEGORIES + STATS -->
+    <div class="section-grid">
+
+        <!-- <div class="section-admin">
+            <div class="section-header">Current Categories</div>
+            <div class="categories">
+                <div class="category"><a href="anime.html>"><img src="../images/Logos/erasebg-transformed.png" alt="Anime Logo" id="img1"></a></div>
+                <div class="category"><a href="Movies_Series.html"><img src="../images/Logos/erasebg-transformed2.png" alt="Movie&Series Logo" id="img1"></a></div>
+                <div class="category"><a href="Music.html"><img src="../images/Logos/musiclogo_2.png" alt="Music Logo" id="img1"></a></div>
+                <div class="category"><a href="games.html"><img src="../images/Logos/Gamming_logo.png" alt="Games Logo" id="img1"></a></div>
+                Duplicate Logos             
+                <div class="category"><a href="anime.html>"><img src="../images/Logos/erasebg-transformed.png" alt="Fanfinity Logo" id="img1"></a></div>
+                <div class="category"><a href="Movies_Series.html"><img src="../images/Logos/erasebg-transformed2.png" alt="Fanfinity Logo" id="img1"></a></div>
+                <div class="category"><a href="Music.html"><img src="../images/Logos/musiclogo_2.png" alt="Fanfinity Logo" id="img1"></a></div>
+                <div class="category"><a href="games.html"><img src="../images/Logos/Gamming_logo.png" alt="Games Logo" id="img1"></a></div>
+
+            </div>
+            <button class="add-btn" onclick="openProductForm()">ADD +</button>
+        </div> -->
+
+        <div class="section-admin">
+    <div class="section-header">Current Categories</div>
+
+    <div class="categories-wrapper">
+        <button class="category-arrow left" id="categoryPrevBtn">&#10094;</button>
+
+        <div class="categories-viewport">
+            <div class="categories-track" id="categoriesTrack">
+                <div class="category">
+                    <!-- <a href="../category/anime.html"> -->
+                        <img src="../images/Logos/erasebg-transformed.png" alt="Anime Logo" id="img1">
+                    <!-- </a> -->
+                </div>
+
+                <div class="category">
+                    <!-- <a href="../category/Movies_Series.html"> -->
+                        <img src="../images/Logos/erasebg-transformed2.png" alt="Movie&Series Logo" id="img1">
+                    <!-- </a> -->
+                </div>
+
+                <div class="category">
+                    <!-- <a href="../category/Music.html"> -->
+                        <img src="../images/Logos/musiclogo_2.png" alt="Music Logo" id="img1">
+                    <!-- </a> -->
+                </div>
+
+                <div class="category">
+                    <!-- <a href="../category/games.html"> -->
+                        <img src="../images/Logos/Gamming_logo.png" alt="Games Logo" id="img1">
+                    <!-- </a> -->
+                </div>
+
+                <!-- keep duplicates if you want more items visible in slider -->
+                <!-- <div class="category">
+                    <a href="anime.html">
+                        <img src="../images/Logos/erasebg-transformed.png" alt="Anime Logo" id="img1">
+                    </a>
+                </div>
+
+                <div class="category">
+                    <a href="Movies_Series.html">
+                        <img src="../images/Logos/erasebg-transformed2.png" alt="Movie&Series Logo" id="img1">
+                    </a>
+                </div>
+
+                <div class="category">
+                    <a href="Music.html">
+                        <img src="../images/Logos/musiclogo_2.png" alt="Music Logo" id="img1">
+                    </a>
+                </div>
+
+                <div class="category">
+                    <a href="games.html">
+                        <img src="../images/Logos/Gamming_logo.png" alt="Games Logo" id="img1">
+                    </a>
+                </div> -->
+            </div>
+        </div>
+
+        <button class="category-arrow right" id="categoryNextBtn">&#10095;</button>
+    </div>
+
+    <button class="add-btn" onclick="openProductForm()">ADD +</button>
+</div>
+
+            <!-- <div class="section-admin">
+                <div class="section-header">Stats</div>
+                <div class="chart">
+                    <canvas id="categoryChart" height="250"></canvas>
+                </div>
+            </div> -->
+         <div class="section-admin">
+            <div class="section-header">Stats</div>
+                <div class="chart" style="position: relative; height: 300px;">
+                    <canvas id="categoryChart"></canvas>
+                </div>
+            </div>   
+        </div>
+
+
+
+    <!-- PRODUCTS + USER INFO -->
+    <div class="section-grid">
+
+        <div class="section-admin">
+            <div class="section-header">Products</div>
+            <div class="products" id="productsContainer">
+
+                <!-- here products will load dynamically so remove this static products-->
+
+                <!-- <div class="product-img"></div>
+                <div class="product-img"></div>
+                <div class="product-img"></div> -->
+                
+            </div>
+            <a href="product-info.html"><button class="add-btn">Go To</button></a>
+        </div>
+
+        <div class="section-admin">
+            <div class="section-header">User Information</div>
+
+            <!-- <table>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+                </thead>
+                 remove this entries to fetch data from user-info table till <tbody> tag
+                <tr>
+                    <td>Send welcome email</td>
+                    <td><span>04 Apr 2030</span></td>
+                </tr>
+                <tr>
+                    <td>Setup completion</td>
+                    <td><span>11 Apr 2030</span></td>
+                </tr>
+                <tr>
+                    <td>Share tutorial links</td>
+                    <td><span>18 Apr 2030</span></td>
+                </tr>
+                <tbody id="dashboardUserTable"></tbody>
+            </table> -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Order ID</th>
+                        <th>Order Status</th>
+                    </tr>
+                </thead>
+                <tbody id="dashboardUserTable"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- product input Form -->
+<!-- <div class="add-product" id="productModal">
+
+    <div class="product-form-container">
+
+        <span class="close-btn" onclick="closeProductForm()">×</span>
+        <h2>Add New Category</h2>
+
+        <form class="product-form">
+
+            <div class="form-group">
+                <label>Category Name</label>
+                <input type="text" id="productName" placeholder="Enter Category name">
+            </div>
+
+            <div class="form-group">
+                <label>Category logo</label>
+                <input type="file" id="productImage">
+            </div>
+
+            <div class="form-group">
+                <label>Description</label>
+                <textarea id="productDesc" placeholder="Enter Category description"></textarea>
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label>Sub Category</label>
+                    <input type="text" id="price" placeholder="None">
+                </div>
+
+                <div class="form-group">
+                    <label>Sub-Category Logo</label>
+                    <input type="file" id="stock" placeholder="Add Logo ">
+                </div>
+
+            </div>
+
+            
+
+            <button type="button" class="add-product-btn" onclick="addProduct()">
+                Add Category
+            </button>
+
+        </form>
+
+    </div>
+</div> -->
+
+<div class="add-product" id="productModal">
+    <div class="product-form-container">
+
+        <span class="close-btn" onclick="closeProductForm()">×</span>
+        <h2>Add New Category</h2>
+
+        <form class="product-form" id="addCategoryForm" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label>Main Category Name</label>
+                <input type="text" id="categoryName" placeholder="Enter category name">
+            </div>
+
+            <div class="form-group">
+                <label>Main Category Logo</label>
+                <input type="file" id="categoryLogo" accept="image/*">
+            </div>
+
+            <div class="form-group">
+                <label>Add Subcategory Also?</label>
+                <select id="hasSubcategory">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+
+            <div id="subcategoryFields" style="display:none;">
+                <div class="form-group">
+                    <label>Subcategory Name</label>
+                    <input type="text" id="subCategoryName" placeholder="Enter subcategory name">
+                </div>
+
+                <div class="form-group">
+                    <label>Subcategory Logo</label>
+                    <input type="file" id="subCategoryLogo" accept="image/*">
+                </div>
+            </div>
+
+            <button type="button" class="add-product-btn" onclick="addCategory()">
+                Add Category
+            </button>
+
+        </form>
+
+    </div>
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    if (!logoutBtn) return;
+
+    logoutBtn.addEventListener("click", async function () {
+        try {
+            const apiBase =
+                window.location.port === "5500"
+                    ? "http://127.0.0.1:5000"
+                    : "";
+
+            await fetch(`${apiBase}/api/logout`, {
+                method: "POST",
+                credentials: "include"
+            });
+
+            alert("Please login to access Fanfinity.");
+
+            if (window.location.port === "5500") {
+                window.location.href = "http://127.0.0.1:5500/home.html";
+            } else {
+                window.location.href = "/home.html";
+            }
+        } catch (err) {
+            console.error("Logout failed:", err);
+            alert("Logout failed");
+        }
+    });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const apiBase =
+        window.location.port === "5500"
+            ? "http://127.0.0.1:5000"
+            : "";
+
+    fetch(`${apiBase}/api/me`, { credentials: "include" })
+        .then(res => {
+            if (!res.ok) throw new Error("Not authorized");
+            return res.json();
+        })
+        .then(data => {
+            if (data.role !== "admin") {
+                alert("Access denied. Please login as admin.");
+
+                if (window.location.port === "5500") {
+                    window.location.href = "http://127.0.0.1:5500/home.html";
+                } else {
+                    window.location.href = "/home.html";
+                }
+            }
+        })
+        .catch(() => {
+            alert("Access denied. Please login as admin.");
+
+            if (window.location.port === "5500") {
+                window.location.href = "http://127.0.0.1:5500/home.html";
+            } else {
+                window.location.href = "/home.html";
+            }
+        });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.getElementById("categoriesTrack");
+    const prev = document.getElementById("categoryPrevBtn");
+    const next = document.getElementById("categoryNextBtn");
+
+    let position = 0;
+    const moveAmount = 250;
+
+    next.addEventListener("click", () => {
+        position -= moveAmount;
+        track.style.transform = `translateX(${position}px)`;
+    });
+
+    prev.addEventListener("click", () => {
+        position += moveAmount;
+        if (position > 0) position = 0;
+        track.style.transform = `translateX(${position}px)`;
+    });
+});
+</script>
+
+<script>
+async function addProduct() {
+    const name = document.getElementById("categoryName").value;
+    const isSub = document.getElementById("isSubcategory").value;
+    const parent = document.getElementById("parentCategory").value;
+
+    const apiBase = window.location.port === "5500"
+        ? "http://127.0.0.1:5000"
+        : "";
+
+    try {
+        const res = await fetch(`${apiBase}/api/admin/categories`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            credentials: "include",
+            body: JSON.stringify({
+                category_name: name,
+                parent_category_id: isSub === "yes" ? parent : null
+            })
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) throw new Error(data.error);
+
+        alert("Category added successfully");
+        location.reload();
+
+    } catch (err) {
+        console.error(err);
+        alert("Failed to add category");
+    }
+}
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const hasSubcategory = document.getElementById("hasSubcategory");
+    const subcategoryFields = document.getElementById("subcategoryFields");
+
+    if (hasSubcategory && subcategoryFields) {
+        hasSubcategory.addEventListener("change", function () {
+            subcategoryFields.style.display = this.value === "yes" ? "block" : "none";
+        });
+    }
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.getElementById("categoriesTrack");
+    const prevBtn = document.getElementById("categoryPrevBtn");
+    const nextBtn = document.getElementById("categoryNextBtn");
+
+    if (!track || !prevBtn || !nextBtn) return;
+
+    let position = 0;
+    const moveAmount = 260;
+
+    function updateArrowVisibility() {
+        const totalCategories = track.children.length;
+
+        if (totalCategories > 4) {
+            prevBtn.classList.add("show");
+            nextBtn.classList.add("show");
+        } else {
+            prevBtn.classList.remove("show");
+            nextBtn.classList.remove("show");
+            position = 0;
+            track.style.transform = `translateX(0px)`;
+        }
+    }
+
+    nextBtn.addEventListener("click", () => {
+        const maxScroll = track.scrollWidth - track.parentElement.clientWidth;
+        position -= moveAmount;
+
+        if (Math.abs(position) > maxScroll) {
+            position = -maxScroll;
+        }
+
+        track.style.transform = `translateX(${position}px)`;
+    });
+
+    prevBtn.addEventListener("click", () => {
+        position += moveAmount;
+
+        if (position > 0) {
+            position = 0;
+        }
+
+        track.style.transform = `translateX(${position}px)`;
+    });
+
+    updateArrowVisibility();
+});
+</script>
+
+<script src="../src/scripts/admin/Admin_load_Nos.js" defer></script>
+
+<script src="../src/scripts/admin/Admin-userTable.js" defer></script>
+
+<script src="../src/scripts/pages/product-info.js" defer></script>
+
+<script src="../src/scripts/admin/Admin-products.js" defer></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="../src/scripts/admin/Admin-charts.js" defer></script>
+
+</body>
+</html>

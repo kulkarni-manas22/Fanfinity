@@ -1,0 +1,133 @@
+body{
+background:#1f1f1f;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:sans-serif;
+}
+
+.wheel-container{
+position:relative;
+width:600px;
+height:600px;
+border-radius:50%;
+border:18px solid #ff7a00;
+overflow:hidden;
+background:#eee;
+}
+
+/* sections */
+
+.section{
+position:absolute;
+width:50%;
+height:50%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:0.3s;
+}
+
+/* Top Left */
+.anime{
+top:0;
+left:0;
+border-right:4px solid #ff7a00;
+border-bottom:4px solid #ff7a00;
+}
+
+/* Top Right */
+.movies{
+top:0;
+right:0;
+border-left:4px solid #ff7a00;
+border-bottom:4px solid #ff7a00;
+}
+
+/* Bottom Left */
+.games{
+bottom:0;
+left:0;
+border-right:4px solid #ff7a00;
+border-top:4px solid #ff7a00;
+}
+
+/* Bottom Right */
+.music{
+bottom:0;
+right:0;
+border-left:4px solid #ff7a00;
+border-top:4px solid #ff7a00;
+}
+
+/* icons */
+
+.section img{
+width:120px;
+margin-bottom:10px;
+}
+
+/* text around */
+
+.section span{
+position:absolute;
+font-size:26px;
+color:white;
+}
+
+/* label positions */
+
+.anime span{
+top:40px;
+left:60px;
+transform:rotate(-45deg);
+}
+
+.movies span{
+top:40px;
+right:40px;
+transform:rotate(45deg);
+}
+
+.games span{
+bottom:40px;
+left:60px;
+transform:rotate(45deg);
+}
+
+.music span{
+bottom:40px;
+right:40px;
+transform:rotate(-45deg);
+}
+
+/* hover effect */
+
+.section:hover{
+background:rgba(255,122,0,0.2);
+cursor:pointer;
+}
+
+/* center star */
+
+.center-star{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:#ff7a00;
+color:#ffd54d;
+font-size:50px;
+width:120px;
+height:120px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+border:6px solid #8b2f00;
+}
