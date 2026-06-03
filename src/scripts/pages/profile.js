@@ -154,6 +154,11 @@ const confirmPasswordInput = document.getElementById("confirmPasswordInput");
 
     const result = await response.json();
 
+    if (response.status === 429) {
+      alert("Too many OTP requests. Please wait before requesting another OTP.");
+      return;
+    }
+
     if (!response.ok) {
         alert(result.error || "Failed to send OTP.");
         return;
@@ -201,6 +206,11 @@ async function verifyOtpCode() {
     });
 
     const result = await response.json();
+
+    if (response.status === 429) {
+      alert("Too many OTP verification attempts. Please try again later.");
+      return;
+    }
 
     if (!response.ok) {
         alert(result.error || "OTP verification failed.");

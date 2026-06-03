@@ -13,6 +13,8 @@ from psycopg2.extras import RealDictCursor
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -25,6 +27,11 @@ from config import DB_CONFIG
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 app = Flask(__name__, static_folder=PROJECT_ROOT, static_url_path="")
+limiter = Limiter(
+    key_func=get_remote_address,
+    app=app,
+    default_limits=["200 per day", "50 per hour"]
+)
 
 app.secret_key = os.environ.get("SECRET_KEY", "fanfinity-dev-secret-key")
 # CORS(app, supports_credentials=True)
@@ -589,6 +596,7 @@ def search_products():
 # ============================================================
 
 @app.route("/api/signup", methods=["POST"])
+@limiter.limit("3 per minute")
 def signup():
     data = request.get_json() or {}
 
@@ -646,6 +654,7 @@ def signup():
 
 
 @app.route("/api/login", methods=["POST"])
+@limiter.limit("5 per minute")
 def login():
     data = request.get_json() or {}
 
@@ -1212,6 +1221,7 @@ def update_address_profile():
 
 @app.route("/api/profile/send-otp", methods=["POST"])
 @login_required
+@limiter.limit("3 per 10 minutes")
 def send_profile_otp():
     data = request.get_json() or {}
     purpose = data.get("purpose", "").strip()
@@ -1284,6 +1294,7 @@ def send_profile_otp():
 
 @app.route("/api/profile/verify-otp", methods=["POST"])
 @login_required
+@limiter.limit("10 per 10 minutes")
 def verify_profile_otp():
     data = request.get_json() or {}
     otp_code = data.get("otp_code", "").strip()
@@ -1343,6 +1354,7 @@ def verify_profile_otp():
 
 @app.route("/api/profile/password/update", methods=["POST"])
 @login_required
+@limiter.limit("5 per 15 minutes")
 def update_profile_password():
     data = request.get_json() or {}
 
@@ -1447,7 +1459,11 @@ def update_profile_password():
         conn.close()
         return jsonify({"error": "Failed to update password", "details": str(e)}), 500
 
-
+@app.errorhandler(429)
+def ratelimit_handler(e):
+    return jsonify({
+        "error": "Too many requests. Please try again later."
+    }), 429
 
 # ============================================================
 # CART
