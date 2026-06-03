@@ -185,7 +185,8 @@ The project implements security measures including:
 - Protection Against SQL Injection
 - Secure Authentication Flow
 - Access Control for Admin Routes
-
+- Rate Limiting on login and Signup
+- SQL injection Prevention
 ---
 
 ## Testing
